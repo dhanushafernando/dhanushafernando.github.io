@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Awards & Achievements | Dhanusha Fernando</title>
 
 <style>
@@ -12,6 +13,8 @@
     box-sizing: border-box;
 }
 
+html { scroll-behavior: smooth; }
+
 body {
     background: #080808;
     color: #f5f1e9;
@@ -20,38 +23,41 @@ body {
 }
 
 header {
-    padding: 25px 8%;
-    border-bottom: 1px solid #302719;
+    padding: 22px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #302719;
+    background: #080808;
 }
 
 .logo {
     color: #c9a45c;
-    font-size: 22px;
+    font-size: 23px;
     letter-spacing: 3px;
 }
 
 header a {
     color: #c9a45c;
     text-decoration: none;
+    font-size: 13px;
 }
 
 .hero {
     text-align: center;
-    padding: 85px 20px;
-    background: linear-gradient(120deg, #080808, #211a10);
+    padding: 90px 20px;
+    background: linear-gradient(120deg, #080808, #241b0e);
 }
 
 .label {
     color: #c9a45c;
-    letter-spacing: 5px;
-    font-size: 12px;
+    letter-spacing: 4px;
+    font-size: 11px;
+    text-transform: uppercase;
 }
 
 h1 {
-    font-size: clamp(38px, 7vw, 65px);
+    font-size: clamp(40px, 7vw, 70px);
     font-weight: normal;
     margin: 20px 0;
 }
@@ -64,51 +70,101 @@ h1 span, h2 span {
     color: #aaa49a;
 }
 
+nav {
+    padding: 20px 8%;
+    text-align: center;
+    background: #10100f;
+    border-bottom: 1px solid #302719;
+}
+
+nav a {
+    color: #c9a45c;
+    text-decoration: none;
+    margin: 8px 15px;
+    font-size: 13px;
+    display: inline-block;
+}
+
 section {
-    padding: 65px 9%;
+    padding: 70px 9%;
 }
 
 h2 {
-    font-size: 34px;
+    font-size: 35px;
     font-weight: normal;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 .line {
-    width: 60px;
+    width: 65px;
     height: 2px;
     background: #c9a45c;
-    margin: 20px 0 35px;
+    margin: 22px 0 35px;
 }
 
-.award {
+.intro {
+    color: #aaa49a;
+    max-width: 800px;
+    margin-bottom: 30px;
+}
+
+.festival {
     background: #11100e;
     border: 1px solid #302719;
     padding: 25px;
     margin-bottom: 18px;
+    transition: .3s;
 }
 
-.award h3 {
+.festival:hover {
+    border-color: #c9a45c;
+}
+
+.festival h3 {
     color: #c9a45c;
     font-size: 19px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
-.award p {
-    color: #aaa49a;
+.festival p {
+    color: #d0c9bb;
     font-size: 14px;
 }
 
-.category {
+.tag {
+    display: inline-block;
     color: #c9a45c;
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    border: 1px solid #594626;
+    padding: 4px 10px;
+    margin: 5px 5px 0 0;
+    font-size: 12px;
+}
+
+.personal {
+    background: #11100e;
+    border-left: 3px solid #c9a45c;
+    padding: 25px;
+    margin-bottom: 18px;
+}
+
+.personal h3 {
+    color: #c9a45c;
+    font-size: 19px;
+}
+
+.personal p {
+    color: #aaa49a;
+}
+
+.note {
+    color: #aaa49a;
+    font-size: 13px;
+    margin-top: 20px;
 }
 
 footer {
     text-align: center;
-    padding: 25px;
+    padding: 30px;
     border-top: 1px solid #302719;
     color: #777;
     font-size: 12px;
@@ -116,7 +172,7 @@ footer {
 
 @media(max-width:600px) {
     section { padding: 50px 7%; }
-    header { padding: 20px 7%; }
+    header { padding: 18px 6%; }
 }
 </style>
 </head>
@@ -129,199 +185,273 @@ footer {
 </header>
 
 <div class="hero">
-    <div class="label">RECOGNITION & ACHIEVEMENTS</div>
-    <h1>Awards & <span>Honours</span></h1>
-    <p>A journey of cinematic storytelling and international recognition.</p>
+    <div class="label">International Recognition</div>
+    <h1>Awards & <span>Achievements</span></h1>
+    <p>A journey through cinema, creativity and artistic recognition.</p>
 </div>
 
-<section>
-    <div class="label">FILM ACHIEVEMENTS</div>
-    <h2><span>Our Love Is Forever</span></h2>
+<nav>
+    <a href="#personal">PERSONAL AWARDS</a>
+    <a href="#ourlove">OUR LOVE IS FOREVER</a>
+    <a href="#selections">OFFICIAL SELECTIONS</a>
+    <a href="#adancer">A DANCER</a>
+</nav>
+
+<section id="personal">
+
+    <div class="label">Individual Recognition</div>
+    <h2>Personal <span>Awards</span></h2>
     <div class="line"></div>
 
-    <div class="award">
-        <h3>56 International Festival Awards</h3>
-        <p>International recognition for the debut short film.</p>
+    <div class="personal">
+        <h3>Best Director</h3>
+        <p>Mahanayak Uttam International Kolkata Film Festival, India — 2023.</p>
     </div>
 
-    <div class="award">
-        <h3>Black Cat Award International Film Festival 2024</h3>
-        <p>Bolivia — Best Director</p>
+    <div class="personal">
+        <h3>Best Director</h3>
+        <p>Black Cat Award International Film Festival, Bolivia.</p>
     </div>
 
-    <div class="award">
-        <h3>Eye Insignia Film Festival 2023</h3>
-        <p>Best Cinematographer · Best Horror</p>
+    <div class="personal">
+        <h3>Visual Artist of the Year – Sri Lanka</h3>
+        <p>New Generation Youth Top40 Award — 2025.</p>
     </div>
 
-    <div class="award">
-        <h3>Indian Screen Project 2023</h3>
-        <p>Best Director · Best Film · Best Story</p>
-    </div>
-
-    <div class="award">
-        <h3>Miseentage International Film Awards 2023</h3>
-        <p>Best Story</p>
-    </div>
-
-    <div class="award">
-        <h3>International Silver Screen Film Festival 2023</h3>
-        <p>Best Child Artists · Best Story · Best Concept · Best Experimental Film</p>
-    </div>
-
-    <div class="award">
-        <h3>French International Film Festival 2023</h3>
-        <p>Hon'ble Mention</p>
-    </div>
-
-    <div class="award">
-        <h3>Great Indian Short Film Festival Awards 2023</h3>
-        <p>Best Director</p>
-    </div>
-
-    <div class="award">
-        <h3>Crown International Film Awards 2023</h3>
-        <p>Best Editor</p>
-    </div>
-
-    <div class="award">
-        <h3>Cosmos International Film Festival 2023</h3>
-        <p>Best Actor · Best Actress</p>
-    </div>
-
-    <div class="award">
-        <h3>Roots International Film Festival 2023</h3>
-        <p>Best Experimental Film</p>
-    </div>
-
-    <div class="award">
-        <h3>Indian Short Cinema Film Festival 2023</h3>
-        <p>Winner</p>
-    </div>
-
-    <div class="award">
-        <h3>Indie Cine Film Fest 2023</h3>
-        <p>Best Short Film</p>
-    </div>
-
-    <div class="award">
-        <h3>International Cine Film Festival 2023</h3>
-        <p>Winner</p>
-    </div>
-
-    <div class="award">
-        <h3>Indian International Feature & Short Film Festival 2023</h3>
-        <p>Best Film · Best Director · Best Story · Best Cinematographer · Best Editor</p>
-    </div>
-
-    <div class="award">
-        <h3>Golden Film Achievers Award 2023</h3>
-        <p>Best Cinematographer · Best Dramatic Art Film</p>
-    </div>
-
-    <div class="award">
-        <h3>Mahanayak Uttam International Kolkata Film Festival 2023</h3>
-        <p>Best Dialogues</p>
-    </div>
-
-    <div class="award">
-        <h3>Star Bharat Film Festival 2023</h3>
-        <p>Best Actress · Best Horror Film</p>
-    </div>
-
-    <div class="award">
-        <h3>Royal Peacock Film Festival 2023</h3>
-        <p>Best Story · Best Screenplay · Best Director · Best Horror Film</p>
-    </div>
-
-    <div class="award">
-        <h3>International Chalchitra Rolling Awards 2023</h3>
-        <p>Best Director</p>
-    </div>
-
-    <div class="award">
-        <h3>Bioscope Cine International Film Festival 2023</h3>
-        <p>Best Director</p>
-    </div>
-
-    <div class="award">
-        <h3>Satyajit Ritwik Mrinal International Kolkata Film Festival 2023</h3>
-        <p>Best International Film</p>
-    </div>
-
-    <div class="award">
-        <h3>Japan International Global Film Festival 2024</h3>
-        <p>Best Film · Best Director · Best Story · Best Screenplay · Best Cinematography · Best Editor</p>
-    </div>
-</section>
-
-<section style="background:#10100f;">
-    <div class="label">FESTIVAL RECOGNITION</div>
-    <h2><span>Official Selections</span></h2>
-    <div class="line"></div>
-
-    <div class="award">
-        <p>Swastik National Short Film Festival 2023</p>
-    </div>
-
-    <div class="award">
-        <p>Dhanbad International Film Festival 2023</p>
-    </div>
-
-    <div class="award">
-        <p>Almora International Film Awards 2023</p>
-    </div>
-
-    <div class="award">
-        <p>Lift-Off Global Network Sessions 2023</p>
-    </div>
-
-    <div class="award">
-        <p>First-Time Filmmaker Sessions 2023</p>
-    </div>
-
-    <div class="award">
-        <p>Lift-Off Filmmaker Sessions 2023</p>
-    </div>
-</section>
-
-<section>
-    <div class="label">PERSONAL RECOGNITION</div>
-    <h2><span>Individual Achievements</span></h2>
-    <div class="line"></div>
-
-    <div class="award">
-        <h3>Best Director — Kolkata, India</h3>
-        <p>2023</p>
-    </div>
-
-    <div class="award">
-        <h3>Visual Artist of the Year — Sri Lanka</h3>
-        <p>New Generation Youth Top40 Award 2025</p>
-    </div>
-
-    <div class="award">
+    <div class="personal">
         <h3>Best Makeup Artist</h3>
-        <p>French International Short Film Festival — Canvas</p>
+        <p>French International Short Film Festival — Canvas.</p>
     </div>
+
 </section>
 
-<section style="background:#10100f;">
-    <div class="label">LATEST FILM</div>
+<section id="ourlove" style="background:#10100f;">
+
+    <div class="label">Film Awards & Recognition</div>
+    <h2><span>Our Love Is Forever</span></h2>
+
+    <div class="line"></div>
+
+    <p class="intro">
+        Dhanusha Fernando's debut short film, Our Love Is Forever,
+        received international recognition across film festivals.
+        The film's achievements include awards in directing,
+        storytelling, cinematography, acting, editing and other
+        creative categories.
+    </p>
+
+    <div class="festival">
+        <h3>Black Cat Award International Film Festival — 2024</h3>
+        <span class="tag">Best Director</span>
+    </div>
+
+    <div class="festival">
+        <h3>Eye Insignia Film Festival — 2023</h3>
+        <span class="tag">Best Cinematographer</span>
+        <span class="tag">Best Horror</span>
+    </div>
+
+    <div class="festival">
+        <h3>Indian Screen Project (ISP) — 2023</h3>
+        <span class="tag">Best Director</span>
+        <span class="tag">Best Film</span>
+        <span class="tag">Best Story</span>
+    </div>
+
+    <div class="festival">
+        <h3>Miseentage International Film Awards (MIFA) — 2023</h3>
+        <span class="tag">Best Story</span>
+    </div>
+
+    <div class="festival">
+        <h3>International Silver Screen Film Festival (ISSFF) — 2023</h3>
+        <span class="tag">Best Child Artists</span>
+        <span class="tag">Best Story</span>
+        <span class="tag">Best Concept</span>
+        <span class="tag">Best Experimental Film</span>
+    </div>
+
+    <div class="festival">
+        <h3>French International Film Festival — 2023</h3>
+        <span class="tag">Hon'ble Mention</span>
+    </div>
+
+    <div class="festival">
+        <h3>Great Indian Short Film Festival Awards (GISFA) — 2023</h3>
+        <span class="tag">Best Director</span>
+    </div>
+
+    <div class="festival">
+        <h3>Crown International Film Awards (CIFA) — 2023</h3>
+        <span class="tag">Best Editor</span>
+    </div>
+
+    <div class="festival">
+        <h3>Cosmos International Film Festival — 2023</h3>
+        <span class="tag">Best Actor</span>
+        <span class="tag">Best Actress</span>
+    </div>
+
+    <div class="festival">
+        <h3>Roots International Film Festival — 2023</h3>
+        <span class="tag">Best Experimental Film</span>
+    </div>
+
+    <div class="festival">
+        <h3>Indian Short Cinema Film Festival — 2023</h3>
+        <span class="tag">Winner</span>
+    </div>
+
+    <div class="festival">
+        <h3>Indie Cine Film Fest — 2023</h3>
+        <span class="tag">Best Short Film</span>
+    </div>
+
+    <div class="festival">
+        <h3>International Cine Film Festival — 2023</h3>
+        <span class="tag">Winner</span>
+    </div>
+
+    <div class="festival">
+        <h3>Indian International Feature & Short Film Festival — 2023</h3>
+        <span class="tag">Best Film</span>
+        <span class="tag">Best Director</span>
+        <span class="tag">Best Story</span>
+        <span class="tag">Best Cinematographer</span>
+        <span class="tag">Best Editor</span>
+    </div>
+
+    <div class="festival">
+        <h3>Golden Film Achievers Award (GFAA) — 2023</h3>
+        <span class="tag">Best Cinematographer</span>
+        <span class="tag">Best Dramatic Art Film</span>
+    </div>
+
+    <div class="festival">
+        <h3>Mahanayak Uttam International Kolkata Film Festival — 2023</h3>
+        <span class="tag">Best Dialogues</span>
+    </div>
+
+    <div class="festival">
+        <h3>Star Bharat Film Festival — 2023</h3>
+        <span class="tag">Best Actress</span>
+        <span class="tag">Best Horror Film</span>
+    </div>
+
+    <div class="festival">
+        <h3>Royal Peacock Film Festival — 2023</h3>
+        <span class="tag">Best Story</span>
+        <span class="tag">Best Screenplay</span>
+        <span class="tag">Best Director</span>
+        <span class="tag">Best Horror Film</span>
+    </div>
+
+    <div class="festival">
+        <h3>International Chalchitra Rolling Awards — 2023</h3>
+        <span class="tag">Best Director</span>
+    </div>
+
+    <div class="festival">
+        <h3>Bioscope Cine International Film Festival — 2023</h3>
+        <span class="tag">Best Director</span>
+    </div>
+
+    <div class="festival">
+        <h3>Satyajit Ritwik Mrinal International Kolkata Film Festival — 2023</h3>
+        <span class="tag">Best International Film</span>
+    </div>
+
+    <div class="festival">
+        <h3>Japan International Global Film Festival — 2024</h3>
+        <span class="tag">Best Film</span>
+        <span class="tag">Best Director</span>
+        <span class="tag">Best Story</span>
+        <span class="tag">Best Screenplay</span>
+        <span class="tag">Best Cinematography</span>
+        <span class="tag">Best Editor</span>
+    </div>
+
+    <p class="note">
+        Award categories are listed as film achievements.
+        Individual recipient names can be added when confirmed.
+    </p>
+
+</section>
+
+<section id="selections">
+
+    <div class="label">Festival Participation</div>
+    <h2>Official <span>Selections</span></h2>
+    <div class="line"></div>
+
+    <p class="intro">
+        Our Love Is Forever was also selected by the following
+        film festival programmes and sessions.
+    </p>
+
+    <div class="festival">
+        <h3>Swastik National Short Film Festival — 2023</h3>
+        <span class="tag">Official Selection</span>
+    </div>
+
+    <div class="festival">
+        <h3>Dhanbad International Film Festival — 2023</h3>
+        <span class="tag">Official Selection</span>
+    </div>
+
+    <div class="festival">
+        <h3>Almora International Film Awards — 2023</h3>
+        <span class="tag">Official Selection</span>
+    </div>
+
+    <div class="festival">
+        <h3>Lift-Off Global Network Sessions — 2023</h3>
+        <span class="tag">Selection</span>
+    </div>
+
+    <div class="festival">
+        <h3>First-Time Filmmaker Sessions — 2023</h3>
+        <span class="tag">Selection</span>
+    </div>
+
+    <div class="festival">
+        <h3>Lift-Off Filmmaker Sessions — 2023</h3>
+        <span class="tag">Selection</span>
+    </div>
+
+</section>
+
+<section id="adancer" style="background:#10100f;">
+
+    <div class="label">Film Recognition</div>
     <h2><span>A Dancer (නැට්ටුවෙක්)</span></h2>
     <div class="line"></div>
-    <div class="award">
-        <p>
-            A Sinhala psychological drama directed by Dhanusha Fernando.
-            Its international festival journey and confirmed achievements
-            will be updated here.
-        </p>
+
+    <p class="intro">
+        A Sinhala psychological drama directed by Dhanusha Fernando.
+        The film's international festival journey includes submissions,
+        selections and screenings. Confirmed awards and nominations
+        will be added as they are announced.
+    </p>
+
+    <div class="festival">
+        <h3>Black Cat Award International Film Festival — 2026</h3>
+        <span class="tag">Official Selection</span>
+        <span class="tag">International Screening</span>
+        <p>La Paz, Bolivia — November 11–15, 2026.</p>
     </div>
+
+    <p class="note">
+        Other festival submissions are not presented as awards or
+        official selections unless confirmation has been received.
+    </p>
+
 </section>
 
 <footer>
     © 2026 Dhanusha Fernando. All Rights Reserved.
+    <br>Film Director · Writer · Editor · Visual Artist
 </footer>
 
 </body>
-  </html>
+    </html>
