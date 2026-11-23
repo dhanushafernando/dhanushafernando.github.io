@@ -1,294 +1,186 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Awards & Achievements | Dhanusha Fernando</title>
-
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+<title>Awards & Recognition | Dhanusha Fernando</title><style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ background:#090909;
+ color:#eee;
+ font-family:Arial, sans-serif;
+ line-height:1.6;
 }
-
-body {
-    background: #080808;
-    color: #eeeeee;
-    font-family: Arial, sans-serif;
-    line-height: 1.7;
+header{
+ text-align:center;
+ padding:45px 15px 30px;
+ background:linear-gradient(135deg,#17120a,#080808);
+ border-bottom:1px solid #80652b;
 }
-
-header {
-    background: #111;
-    padding: 22px 15px;
-    text-align: center;
-    border-bottom: 1px solid #b89548;
+header h1{
+ color:#d6b45c;
+ font-size:34px;
+ letter-spacing:4px;
+ margin:0;
 }
-
-header h1 {
-    color: #d4af63;
-    font-size: 25px;
-    letter-spacing: 2px;
+header p{color:#aaa;letter-spacing:2px}
+nav{
+ display:flex;
+ justify-content:center;
+ flex-wrap:wrap;
+ gap:22px;
+ padding:17px 10px;
+ background:#111;
 }
-
-nav {
-    margin-top: 15px;
+nav a{
+ color:#d6b45c;
+ text-decoration:none;
+ font-size:13px;
+ letter-spacing:1px;
 }
-
-nav a {
-    color: #eee;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 13px;
+nav a:hover{color:white}
+.container{
+ max-width:1050px;
+ margin:auto;
+ padding:25px 18px 60px;
 }
-
-nav a:hover {
-    color: #d4af63;
+.intro{
+ text-align:center;
+ padding:30px 10px;
 }
-
-.hero {
-    text-align: center;
-    padding: 65px 20px 45px;
+.intro h2{
+ color:#d6b45c;
+ font-size:28px;
 }
-
-.hero h2 {
-    color: #d4af63;
-    font-size: 34px;
-    margin-bottom: 12px;
+.intro p{color:#bbb}
+.highlight{
+ text-align:center;
+ padding:30px 15px;
+ margin:20px 0 40px;
+ border:1px solid #8b7137;
+ background:linear-gradient(135deg,#1b160b,#101010);
 }
-
-.hero p {
-    color: #aaa;
-    max-width: 650px;
-    margin: auto;
+.highlight strong{
+ display:block;
+ color:#e3c36d;
+ font-size:45px;
 }
-
-.container {
-    max-width: 950px;
-    margin: auto;
-    padding: 20px;
+.highlight span{color:#ccc;letter-spacing:2px}
+.section-title{
+ color:#d6b45c;
+ font-size:24px;
+ border-bottom:1px solid #705a2b;
+ padding-bottom:10px;
+ margin-top:50px;
 }
-
-.section-title {
-    color: #d4af63;
-    font-size: 25px;
-    text-align: center;
-    margin: 35px 0 25px;
+.award-grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:15px;
+ margin-top:20px;
 }
-
-.award-card {
-    background: #141414;
-    border: 1px solid #393026;
-    border-radius: 10px;
-    padding: 23px;
-    margin-bottom: 18px;
-    transition: 0.3s;
+.card{
+ background:#141414;
+ border:1px solid #393020;
+ padding:20px;
+ border-radius:5px;
+ transition:.2s;
 }
-
-.award-card:hover {
-    border-color: #d4af63;
-    transform: translateY(-3px);
+.card:hover{
+ border-color:#d6b45c;
+ transform:translateY(-3px);
 }
-
-.award-card h3 {
-    color: #d4af63;
-    font-size: 19px;
-    margin-bottom: 7px;
+.card .trophy{font-size:25px}
+.card h3{
+ color:#e0c16a;
+ font-size:16px;
+ margin:8px 0;
 }
-
-.award-card p {
-    color: #bbb;
-    font-size: 15px;
+.card p{color:#bbb;font-size:13px;margin:5px 0}
+.category{color:#fff!important}
+.year{color:#b99b55!important}
+.selection{
+ border-left:3px solid #b99b55;
+ padding:14px 18px;
+ background:#141414;
+ margin:12px 0;
+ color:#ccc;
 }
-
-.award-type {
-    color: #d4af63;
-    font-size: 12px;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-    text-transform: uppercase;
+footer{
+ text-align:center;
+ padding:25px;
+ background:#111;
+ color:#888;
+ font-size:12px;
+ border-top:1px solid #80652b;
 }
-
-.highlight {
-    text-align: center;
-    background: #17140e;
-    border: 1px solid #b89548;
-    border-radius: 12px;
-    padding: 35px 20px;
-    margin: 35px 0;
-}
-
-.highlight h3 {
-    color: #d4af63;
-    font-size: 38px;
-}
-
-.highlight p {
-    color: #ccc;
-    margin-top: 8px;
-}
-
-.note {
-    color: #888;
-    font-size: 13px;
-    text-align: center;
-    margin: 25px auto;
-    max-width: 750px;
-}
-
-footer {
-    text-align: center;
-    padding: 25px 15px;
-    margin-top: 50px;
-    background: #111;
-    border-top: 1px solid #393026;
-    color: #888;
-    font-size: 13px;
-}
-
-@media (max-width: 600px) {
-    .hero h2 {
-        font-size: 27px;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 6px;
-    }
-
-    .award-card {
-        padding: 18px;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<header>
-    <h1>DHANUSHA FERNANDO</h1>
-
-    <nav>
-        <a href="index.html">HOME</a>
-        <a href="about.html">ABOUT</a>
-        <a href="filmography.html">FILMS</a>
-        <a href="awards.html">AWARDS</a>
-    </nav>
-</header>
-
-<section class="hero">
-    <h2>Awards & Achievements</h2>
-
-    <p>
-        Recognitions and achievements celebrating my journey
-        in filmmaking, cinematography and visual arts.
-    </p>
-</section>
-
-<main class="container">
-
-    <h2 class="section-title">Personal Awards & Achievements</h2>
-
-    <div class="award-card">
-        <div class="award-type">Best Director</div>
-        <h3>Best Director Award</h3>
-        <p>
-            Kolkata, India – 2023
-        </p>
-    </div>
-
-    <div class="award-card">
-        <div class="award-type">Best Director</div>
-        <h3>Best Director Award</h3>
-        <p>
-            Black Cat Award International Film Festival,
-            Bolivia.
-        </p>
-    </div>
-
-    <div class="award-card">
-        <div class="award-type">Best Cinematography</div>
-        <h3>Best Cinematography Award</h3>
-        <p>
-            Australian International Film Festival 2026
-            <br>
-            Film: Mouna Silambu
-        </p>
-    </div>
-
-    <div class="award-card">
-        <div class="award-type">Best Cinematography</div>
-        <h3>Best Cinematography Award</h3>
-        <p>
-            Indo Japan International Film Festival 2026
-            <br>
-            Film: Mouna Silambu
-        </p>
-    </div>
-
-    <div class="award-card">
-        <div class="award-type">Best Makeup Artist</div>
-        <h3>Best Makeup Artist Award</h3>
-        <p>
-            French International Short Film Festival
-            <br>
-            Film: The Canvas
-            <br>
-            Recognition for prosthetic makeup work.
-        </p>
-    </div>
-
-    <div class="award-card">
-        <div class="award-type">Special Recognition</div>
-        <h3>Visual Artist of the Year – Sri Lanka</h3>
-        <p>
-            New Generation Youth Top40 Awards 2025
-        </p>
-    </div>
-
-
-    <h2 class="section-title">Film Recognition</h2>
-
-    <div class="highlight">
-        <h3>56 INTERNATIONAL AWARDS</h3>
-
-        <p>
-            Our Love Is Forever
-        </p>
-
-        <p>
-            An award-winning short film recognised
-            at international film festivals.
-        </p>
-    </div>
-
-    <div class="award-card">
-        <div class="award-type">Official Selection – 2026</div>
-
-        <h3>Black Cat Award International Film Festival</h3>
-
-        <p>
-            Film: A Dancer (නැට්ටුවෙක්)
-            <br>
-            La Paz, Bolivia
-        </p>
-    </div>
-
-    <p class="note">
-        The awards listed in the personal achievements section
-        recognise individual achievements. Film recognition
-        reflects the achievements and contributions of the
-        respective films and their creative teams.
-    </p>
-
-</main>
-
-<footer>
-    <p>© 2026 Dhanusha Fernando. All Rights Reserved.</p>
-    <p>Filmmaker · Storyteller · Visual Artist</p>
-</footer>
-
-</body>
-            </html>
+</style></head><body><header>
+<h1>AWARDS & RECOGNITION</h1>
+<p>CELEBRATING CINEMATIC ACHIEVEMENTS</p>
+</header><nav>
+<a href="index.html">HOME</a>
+<a href="about.html">ABOUT</a>
+<a href="filmography.html">FILMS</a>
+<a href="awards.html">AWARDS</a>
+</nav><div class="container"><div class="intro">
+<h2>A Journey Through Cinema</h2>
+<p>
+Every recognition represents dedication, creativity and the passion
+for bringing meaningful stories to the screen.
+</p>
+</div><div class="highlight">
+<strong>56</strong>
+<span>INTERNATIONAL AWARDS</span>
+<p>Our Love Is Forever – Award-winning Short Film</p>
+</div><h2 class="section-title">PERSONAL AWARDS & ACHIEVEMENTS</h2><div class="award-grid"><div class="card">
+<div class="trophy">🏆</div>
+<h3>Best Director</h3>
+<p>Mahanayak Uttam International Kolkata Film Festival</p>
+<p class="year">Kolkata, India · 2023</p>
+</div><div class="card">
+<div class="trophy">🏆</div>
+<h3>Best Director</h3>
+<p>Black Cat Award International Film Festival</p>
+<p class="year">Bolivia · 2024</p>
+</div><div class="card">
+<div class="trophy">🏆</div>
+<h3>Visual Artist of the Year – Sri Lanka</h3>
+<p>New Generation Youth Top40 Awards</p>
+<p class="year">2025</p>
+</div><div class="card">
+<div class="trophy">🏆</div>
+<h3>Best Cinematography</h3>
+<p>Australian International Film Festival</p>
+<p class="year">2026 · Mouna Silambu</p>
+</div><div class="card">
+<div class="trophy">🏆</div>
+<h3>Best Cinematography</h3>
+<p>Indo Japan International Film Festival</p>
+<p class="year">2026 · Mouna Silambu</p>
+</div><div class="card">
+<div class="trophy">🏆</div>
+<h3>Best Makeup Artist</h3>
+<p>French International Short Film Festival</p>
+<p class="year">The Canvas · Prosthetic Makeup</p>
+</div></div><h2 class="section-title">OUR LOVE IS FOREVER</h2>
+<p style="color:#bbb">
+An award-winning Sri Lankan short film recognised at international
+film festivals for its storytelling and cinematic achievements.
+</p><h3 style="color:#d6b45c;margin-top:30px">International Festival Awards</h3><div class="award-grid"><div class="card"><div class="trophy">🏆</div><h3>Indian International Feature & Short Film Festival</h3><p class="category">Best Film · Best Director · Best Story · Best Cinematographer · Best Editor</p><p class="year">2023</p></div><div class="card"><div class="trophy">🏆</div><h3>Japan International Global Film Festival</h3><p class="category">Best Film · Best Director · Best Story · Best Screenplay · Best Cinematography · Best Editor</p><p class="year">2024</p></div><div class="card"><div class="trophy">🏆</div><h3>Indian Screen Project</h3><p class="category">Best Director · Best Film · Best Story</p><p class="year">2023</p></div><div class="card"><div class="trophy">🏆</div><h3>International Silver Screen Film Festival</h3><p class="category">Best Child Artists · Best Story · Best Concept · Best Experimental Film</p><p class="year">2023</p></div><div class="card"><div class="trophy">🏆</div><h3>Golden Film Achievers Award</h3><p class="category">Best Cinematographer · Best Dramatic Art Film</p><p class="year">2023</p></div><div class="card"><div class="trophy">🏆</div><h3>Eye Insignia Film Festival</h3><p class="category">Best Cinematographer · Best Horror</p><p class="year">2023</p></div><div class="card"><div class="trophy">🏆</div><h3>Royal Peacock Film Festival</h3><p class="category">Best Story · Best Screenplay · Best Director · Best Horror Film</p><p class="year">2023</p></div><div class="card"><div class="trophy">🏆</div><h3>Cosmos International Film Festival</h3><p class="category">Best Actor · Best Actress</p><p class="year">2023</p></div><div class="card"><div class="trophy">🏆</div><h3>Star Bharat Film Festival</h3><p class="category">Best Actress · Best Horror Film</p><p class="year">2023</p></div><div class="card"><div class="trophy">🏆</div><h3>Mahanayak Uttam International Kolkata Film Festival</h3><p class="category">Best Dialogues</p><p class="year">2023</p></div><div class="card"><div class="trophy">🏆</div><h3>Crown International Film Awards</h3><p class="category">Best Editor</p><p class="year">2023</p></div><div class="card"><div class="trophy">🏆</div><h3>Roots International Film Festival</h3><p class="category">Best Experimental Film</p><p class="year">2023</p></div><div class="card"><div class="trophy">🏆</div><h3>Great Indian Short Film Festival Awards</h3><p class="category">Best Director</p><p class="year">2023</p></div><div class="card"><div class="trophy">🏆</div><h3>International Cine Film Festival</h3><p class="category">Winner</p><p class="year">Kolkata · 2023</p></div><div class="card"><div class="trophy">🏆</div><h3>Indian Short Cinema Film Festival</h3><p class="category">Winner</p><p class="year">2023</p></div><div class="card"><div class="trophy">🏆</div><h3>Indie Cine Film Fest</h3><p class="category">Best Short Film</p><p class="year">2023</p></div><div class="card"><div class="trophy">🏆</div><h3>International Chalchitra Rolling Awards</h3><p class="category">Best Director</p><p class="year">2023</p></div><div class="card"><div class="trophy">🏆</div><h3>Bioscope Cine International Film Festival</h3><p class="category">Best Director</p><p class="year">2023</p></div><div class="card"><div class="trophy">🏆</div><h3>Agra International Film Awards</h3><p class="category">Best Short Film</p><p class="year">2023</p></div><div class="card"><div class="trophy">🏆</div><h3>Mashaal Shorts International Film Festival</h3><p class="category">Best Concept</p><p class="year">2023</p></div><div class="card"><div class="trophy">🏆</div><h3>Radiant International Film Festival Awards</h3><p class="category">Best Short Film</p><p class="year">2023</p></div><div class="card"><div class="trophy">🏆</div><h3>French International Film Festival</h3><p class="category">Hon'ble Mention</p><p class="year">2023</p></div><div class="card"><div class="trophy">🏆</div><h3>Behala International Film Festival</h3><p class="category">Best Actor · Best Actress · Best Experimental Film · Best Story</p><p class="year">2023</p></div></div><h3 style="color:#d6b45c;margin-top:40px">Official Selections & Recognitions</h3><div class="selection">Swastik National Short Film Festival · 2023</div>
+<div class="selection">Dhanbad International Film Festival · 2023</div>
+<div class="selection">Almora International Film Awards · 2023</div>
+<div class="selection">Lift-Off Global Network Sessions · 2023</div>
+<div class="selection">First-Time Filmmaker Sessions · 2023</div>
+<div class="selection">Lift-Off Filmmaker Sessions · 2023</div>
+<div class="selection">National Youth Film Festival, Colombo · 2023</div><h2 class="section-title">A DANCER (නැට්ටුවෙක්)</h2><div class="card" style="margin-top:20px">
+<div class="trophy">🎬</div>
+<h3>Official Selection</h3>
+<p>Black Cat Award International Film Festival</p>
+<p class="year">La Paz, Bolivia · 2026</p>
+</div><div style="text-align:center;margin-top:55px;color:#b99b55">
+<p>“Every award is a milestone. Every story is a journey.”</p>
+<p style="color:#888">Dhanusha Fernando · Filmmaker</p>
+</div></div><footer>
+© 2026 Dhanusha Fernando. All Rights Reserved.
+</footer></body>
+          </html>
