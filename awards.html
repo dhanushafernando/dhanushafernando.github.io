@@ -13,166 +13,154 @@
     box-sizing: border-box;
 }
 
-html { scroll-behavior: smooth; }
-
 body {
     background: #080808;
-    color: #f5f1e9;
-    font-family: Georgia, serif;
+    color: #eeeeee;
+    font-family: Arial, sans-serif;
     line-height: 1.7;
 }
 
 header {
-    padding: 22px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #302719;
-    background: #080808;
+    background: #111;
+    padding: 22px 15px;
+    text-align: center;
+    border-bottom: 1px solid #b89548;
 }
 
-.logo {
-    color: #c9a45c;
-    font-size: 23px;
-    letter-spacing: 3px;
+header h1 {
+    color: #d4af63;
+    font-size: 25px;
+    letter-spacing: 2px;
 }
 
-header a {
-    color: #c9a45c;
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: #eee;
     text-decoration: none;
+    margin: 0 10px;
     font-size: 13px;
+}
+
+nav a:hover {
+    color: #d4af63;
 }
 
 .hero {
     text-align: center;
-    padding: 90px 20px;
-    background: linear-gradient(120deg, #080808, #241b0e);
+    padding: 65px 20px 45px;
 }
 
-.label {
-    color: #c9a45c;
-    letter-spacing: 4px;
-    font-size: 11px;
-    text-transform: uppercase;
-}
-
-h1 {
-    font-size: clamp(40px, 7vw, 70px);
-    font-weight: normal;
-    margin: 20px 0;
-}
-
-h1 span, h2 span {
-    color: #c9a45c;
+.hero h2 {
+    color: #d4af63;
+    font-size: 34px;
+    margin-bottom: 12px;
 }
 
 .hero p {
-    color: #aaa49a;
+    color: #aaa;
+    max-width: 650px;
+    margin: auto;
 }
 
-nav {
-    padding: 20px 8%;
+.container {
+    max-width: 950px;
+    margin: auto;
+    padding: 20px;
+}
+
+.section-title {
+    color: #d4af63;
+    font-size: 25px;
     text-align: center;
-    background: #10100f;
-    border-bottom: 1px solid #302719;
+    margin: 35px 0 25px;
 }
 
-nav a {
-    color: #c9a45c;
-    text-decoration: none;
-    margin: 8px 15px;
-    font-size: 13px;
-    display: inline-block;
-}
-
-section {
-    padding: 70px 9%;
-}
-
-h2 {
-    font-size: 35px;
-    font-weight: normal;
-    margin: 10px 0;
-}
-
-.line {
-    width: 65px;
-    height: 2px;
-    background: #c9a45c;
-    margin: 22px 0 35px;
-}
-
-.intro {
-    color: #aaa49a;
-    max-width: 800px;
-    margin-bottom: 30px;
-}
-
-.festival {
-    background: #11100e;
-    border: 1px solid #302719;
-    padding: 25px;
+.award-card {
+    background: #141414;
+    border: 1px solid #393026;
+    border-radius: 10px;
+    padding: 23px;
     margin-bottom: 18px;
-    transition: .3s;
+    transition: 0.3s;
 }
 
-.festival:hover {
-    border-color: #c9a45c;
+.award-card:hover {
+    border-color: #d4af63;
+    transform: translateY(-3px);
 }
 
-.festival h3 {
-    color: #c9a45c;
+.award-card h3 {
+    color: #d4af63;
     font-size: 19px;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
 }
 
-.festival p {
-    color: #d0c9bb;
-    font-size: 14px;
+.award-card p {
+    color: #bbb;
+    font-size: 15px;
 }
 
-.tag {
-    display: inline-block;
-    color: #c9a45c;
-    border: 1px solid #594626;
-    padding: 4px 10px;
-    margin: 5px 5px 0 0;
+.award-type {
+    color: #d4af63;
     font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
 }
 
-.personal {
-    background: #11100e;
-    border-left: 3px solid #c9a45c;
-    padding: 25px;
-    margin-bottom: 18px;
+.highlight {
+    text-align: center;
+    background: #17140e;
+    border: 1px solid #b89548;
+    border-radius: 12px;
+    padding: 35px 20px;
+    margin: 35px 0;
 }
 
-.personal h3 {
-    color: #c9a45c;
-    font-size: 19px;
+.highlight h3 {
+    color: #d4af63;
+    font-size: 38px;
 }
 
-.personal p {
-    color: #aaa49a;
+.highlight p {
+    color: #ccc;
+    margin-top: 8px;
 }
 
 .note {
-    color: #aaa49a;
+    color: #888;
     font-size: 13px;
-    margin-top: 20px;
+    text-align: center;
+    margin: 25px auto;
+    max-width: 750px;
 }
 
 footer {
     text-align: center;
-    padding: 30px;
-    border-top: 1px solid #302719;
-    color: #777;
-    font-size: 12px;
+    padding: 25px 15px;
+    margin-top: 50px;
+    background: #111;
+    border-top: 1px solid #393026;
+    color: #888;
+    font-size: 13px;
 }
 
-@media(max-width:600px) {
-    section { padding: 50px 7%; }
-    header { padding: 18px 6%; }
+@media (max-width: 600px) {
+    .hero h2 {
+        font-size: 27px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px;
+    }
+
+    .award-card {
+        padding: 18px;
+    }
 }
 </style>
 </head>
@@ -180,278 +168,127 @@ footer {
 <body>
 
 <header>
-    <div class="logo">DF.</div>
-    <a href="index.html">← BACK TO HOME</a>
+    <h1>DHANUSHA FERNANDO</h1>
+
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="filmography.html">FILMS</a>
+        <a href="awards.html">AWARDS</a>
+    </nav>
 </header>
 
-<div class="hero">
-    <div class="label">International Recognition</div>
-    <h1>Awards & <span>Achievements</span></h1>
-    <p>A journey through cinema, creativity and artistic recognition.</p>
-</div>
+<section class="hero">
+    <h2>Awards & Achievements</h2>
 
-<nav>
-    <a href="#personal">PERSONAL AWARDS</a>
-    <a href="#ourlove">OUR LOVE IS FOREVER</a>
-    <a href="#selections">OFFICIAL SELECTIONS</a>
-    <a href="#adancer">A DANCER</a>
-</nav>
+    <p>
+        Recognitions and achievements celebrating my journey
+        in filmmaking, cinematography and visual arts.
+    </p>
+</section>
 
-<section id="personal">
+<main class="container">
 
-    <div class="label">Individual Recognition</div>
-    <h2>Personal <span>Awards</span></h2>
-    <div class="line"></div>
+    <h2 class="section-title">Personal Awards & Achievements</h2>
 
-    <div class="personal">
-        <h3>Best Director</h3>
-        <p>Mahanayak Uttam International Kolkata Film Festival, India — 2023.</p>
+    <div class="award-card">
+        <div class="award-type">Best Director</div>
+        <h3>Best Director Award</h3>
+        <p>
+            Kolkata, India – 2023
+        </p>
     </div>
 
-    <div class="personal">
-        <h3>Best Director</h3>
-        <p>Black Cat Award International Film Festival, Bolivia.</p>
+    <div class="award-card">
+        <div class="award-type">Best Director</div>
+        <h3>Best Director Award</h3>
+        <p>
+            Black Cat Award International Film Festival,
+            Bolivia.
+        </p>
     </div>
 
-    <div class="personal">
+    <div class="award-card">
+        <div class="award-type">Best Cinematography</div>
+        <h3>Best Cinematography Award</h3>
+        <p>
+            Australian International Film Festival 2026
+            <br>
+            Film: Mouna Silambu
+        </p>
+    </div>
+
+    <div class="award-card">
+        <div class="award-type">Best Cinematography</div>
+        <h3>Best Cinematography Award</h3>
+        <p>
+            Indo Japan International Film Festival 2026
+            <br>
+            Film: Mouna Silambu
+        </p>
+    </div>
+
+    <div class="award-card">
+        <div class="award-type">Best Makeup Artist</div>
+        <h3>Best Makeup Artist Award</h3>
+        <p>
+            French International Short Film Festival
+            <br>
+            Film: The Canvas
+            <br>
+            Recognition for prosthetic makeup work.
+        </p>
+    </div>
+
+    <div class="award-card">
+        <div class="award-type">Special Recognition</div>
         <h3>Visual Artist of the Year – Sri Lanka</h3>
-        <p>New Generation Youth Top40 Award — 2025.</p>
+        <p>
+            New Generation Youth Top40 Awards 2025
+        </p>
     </div>
 
-    <div class="personal">
-        <h3>Best Makeup Artist</h3>
-        <p>French International Short Film Festival — Canvas.</p>
+
+    <h2 class="section-title">Film Recognition</h2>
+
+    <div class="highlight">
+        <h3>56 INTERNATIONAL AWARDS</h3>
+
+        <p>
+            Our Love Is Forever
+        </p>
+
+        <p>
+            An award-winning short film recognised
+            at international film festivals.
+        </p>
     </div>
 
-</section>
+    <div class="award-card">
+        <div class="award-type">Official Selection – 2026</div>
 
-<section id="ourlove" style="background:#10100f;">
+        <h3>Black Cat Award International Film Festival</h3>
 
-    <div class="label">Film Awards & Recognition</div>
-    <h2><span>Our Love Is Forever</span></h2>
-
-    <div class="line"></div>
-
-    <p class="intro">
-        Dhanusha Fernando's debut short film, Our Love Is Forever,
-        received international recognition across film festivals.
-        The film's achievements include awards in directing,
-        storytelling, cinematography, acting, editing and other
-        creative categories.
-    </p>
-
-    <div class="festival">
-        <h3>Black Cat Award International Film Festival — 2024</h3>
-        <span class="tag">Best Director</span>
-    </div>
-
-    <div class="festival">
-        <h3>Eye Insignia Film Festival — 2023</h3>
-        <span class="tag">Best Cinematographer</span>
-        <span class="tag">Best Horror</span>
-    </div>
-
-    <div class="festival">
-        <h3>Indian Screen Project (ISP) — 2023</h3>
-        <span class="tag">Best Director</span>
-        <span class="tag">Best Film</span>
-        <span class="tag">Best Story</span>
-    </div>
-
-    <div class="festival">
-        <h3>Miseentage International Film Awards (MIFA) — 2023</h3>
-        <span class="tag">Best Story</span>
-    </div>
-
-    <div class="festival">
-        <h3>International Silver Screen Film Festival (ISSFF) — 2023</h3>
-        <span class="tag">Best Child Artists</span>
-        <span class="tag">Best Story</span>
-        <span class="tag">Best Concept</span>
-        <span class="tag">Best Experimental Film</span>
-    </div>
-
-    <div class="festival">
-        <h3>French International Film Festival — 2023</h3>
-        <span class="tag">Hon'ble Mention</span>
-    </div>
-
-    <div class="festival">
-        <h3>Great Indian Short Film Festival Awards (GISFA) — 2023</h3>
-        <span class="tag">Best Director</span>
-    </div>
-
-    <div class="festival">
-        <h3>Crown International Film Awards (CIFA) — 2023</h3>
-        <span class="tag">Best Editor</span>
-    </div>
-
-    <div class="festival">
-        <h3>Cosmos International Film Festival — 2023</h3>
-        <span class="tag">Best Actor</span>
-        <span class="tag">Best Actress</span>
-    </div>
-
-    <div class="festival">
-        <h3>Roots International Film Festival — 2023</h3>
-        <span class="tag">Best Experimental Film</span>
-    </div>
-
-    <div class="festival">
-        <h3>Indian Short Cinema Film Festival — 2023</h3>
-        <span class="tag">Winner</span>
-    </div>
-
-    <div class="festival">
-        <h3>Indie Cine Film Fest — 2023</h3>
-        <span class="tag">Best Short Film</span>
-    </div>
-
-    <div class="festival">
-        <h3>International Cine Film Festival — 2023</h3>
-        <span class="tag">Winner</span>
-    </div>
-
-    <div class="festival">
-        <h3>Indian International Feature & Short Film Festival — 2023</h3>
-        <span class="tag">Best Film</span>
-        <span class="tag">Best Director</span>
-        <span class="tag">Best Story</span>
-        <span class="tag">Best Cinematographer</span>
-        <span class="tag">Best Editor</span>
-    </div>
-
-    <div class="festival">
-        <h3>Golden Film Achievers Award (GFAA) — 2023</h3>
-        <span class="tag">Best Cinematographer</span>
-        <span class="tag">Best Dramatic Art Film</span>
-    </div>
-
-    <div class="festival">
-        <h3>Mahanayak Uttam International Kolkata Film Festival — 2023</h3>
-        <span class="tag">Best Dialogues</span>
-    </div>
-
-    <div class="festival">
-        <h3>Star Bharat Film Festival — 2023</h3>
-        <span class="tag">Best Actress</span>
-        <span class="tag">Best Horror Film</span>
-    </div>
-
-    <div class="festival">
-        <h3>Royal Peacock Film Festival — 2023</h3>
-        <span class="tag">Best Story</span>
-        <span class="tag">Best Screenplay</span>
-        <span class="tag">Best Director</span>
-        <span class="tag">Best Horror Film</span>
-    </div>
-
-    <div class="festival">
-        <h3>International Chalchitra Rolling Awards — 2023</h3>
-        <span class="tag">Best Director</span>
-    </div>
-
-    <div class="festival">
-        <h3>Bioscope Cine International Film Festival — 2023</h3>
-        <span class="tag">Best Director</span>
-    </div>
-
-    <div class="festival">
-        <h3>Satyajit Ritwik Mrinal International Kolkata Film Festival — 2023</h3>
-        <span class="tag">Best International Film</span>
-    </div>
-
-    <div class="festival">
-        <h3>Japan International Global Film Festival — 2024</h3>
-        <span class="tag">Best Film</span>
-        <span class="tag">Best Director</span>
-        <span class="tag">Best Story</span>
-        <span class="tag">Best Screenplay</span>
-        <span class="tag">Best Cinematography</span>
-        <span class="tag">Best Editor</span>
+        <p>
+            Film: A Dancer (නැට්ටුවෙක්)
+            <br>
+            La Paz, Bolivia
+        </p>
     </div>
 
     <p class="note">
-         The awards listed above recognise the collective achievements
-of the film and its creative team, including its cast and crew.
+        The awards listed in the personal achievements section
+        recognise individual achievements. Film recognition
+        reflects the achievements and contributions of the
+        respective films and their creative teams.
     </p>
 
-</section>
-
-<section id="selections">
-
-    <div class="label">Festival Participation</div>
-    <h2>Official <span>Selections</span></h2>
-    <div class="line"></div>
-
-    <p class="intro">
-        Our Love Is Forever was also selected by the following
-        film festival programmes and sessions.
-    </p>
-
-    <div class="festival">
-        <h3>Swastik National Short Film Festival — 2023</h3>
-        <span class="tag">Official Selection</span>
-    </div>
-
-    <div class="festival">
-        <h3>Dhanbad International Film Festival — 2023</h3>
-        <span class="tag">Official Selection</span>
-    </div>
-
-    <div class="festival">
-        <h3>Almora International Film Awards — 2023</h3>
-        <span class="tag">Official Selection</span>
-    </div>
-
-    <div class="festival">
-        <h3>Lift-Off Global Network Sessions — 2023</h3>
-        <span class="tag">Selection</span>
-    </div>
-
-    <div class="festival">
-        <h3>First-Time Filmmaker Sessions — 2023</h3>
-        <span class="tag">Selection</span>
-    </div>
-
-    <div class="festival">
-        <h3>Lift-Off Filmmaker Sessions — 2023</h3>
-        <span class="tag">Selection</span>
-    </div>
-
-</section>
-
-<section id="adancer" style="background:#10100f;">
-
-    <div class="label">Film Recognition</div>
-    <h2><span>A Dancer (නැට්ටුවෙක්)</span></h2>
-    <div class="line"></div>
-
-    <p class="intro">
-        A Sinhala psychological drama directed by Dhanusha Fernando.
-        The film's international festival journey includes submissions,
-        selections and screenings. Confirmed awards and nominations
-        will be added as they are announced.
-    </p>
-
-    <div class="festival">
-        <h3>Black Cat Award International Film Festival — 2026</h3>
-        <span class="tag">Official Selection</span>
-        <span class="tag">International Screening</span>
-        <p>La Paz, Bolivia — November 11–15, 2026.</p>
-    </div>
-
-    <p class="note">
-        Other festival submissions are not presented as awards or
-        official selections unless confirmation has been received.
-    </p>
-
-</section>
+</main>
 
 <footer>
-    © 2026 Dhanusha Fernando. All Rights Reserved.
-    <br>Film Director · Writer · Editor · Visual Artist
+    <p>© 2026 Dhanusha Fernando. All Rights Reserved.</p>
+    <p>Filmmaker · Storyteller · Visual Artist</p>
 </footer>
 
 </body>
-    </html>
+            </html>
