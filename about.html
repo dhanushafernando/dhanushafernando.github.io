@@ -64,7 +64,28 @@ p {
 .highlight {
     color: #d4af37;
 }
+.expertise {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
 
+.expertise p {
+    background: #111;
+    border: 1px solid #8c7228;
+    padding: 15px;
+    text-align: center;
+    color: #d4af37;
+    margin: 0;
+    transition: 0.3s;
+}
+
+.expertise p:hover {
+    background: #201b0c;
+    border-color: #d4af37;
+    }
 .quote {
     border-left: 3px solid #d4af37;
     padding: 15px 22px;
@@ -117,6 +138,19 @@ footer {
 <p>
     Through his films, he aims to create thought-provoking stories that leave a lasting impression on audiences beyond the screen.
 </p>
+    <h2>Professional Roles & Creative Expertise</h2>
+
+<div class="expertise">
+    <p>Film Director</p>
+    <p>Screenwriter</p>
+    <p>Cinematographer</p>
+    <p>Assistant Director</p>
+    <p>Film Editor</p>
+    <p>Art Director</p>
+    <p>Visual Effects Artist</p>
+    <p>Prosthetic Makeup & SFX Artist</p>
+    <p>Photographer</p>
+    </div>
 
 <div class="quote">
     "Cinema is not only about telling stories; it is about making people feel, think and remember."
