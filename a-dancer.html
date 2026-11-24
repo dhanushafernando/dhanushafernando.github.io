@@ -1,266 +1,531 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>A Dancer | Dhanusha Fernando</title><style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>A Dancer (නැට්ටුවෙක්) | Dhanusha Fernando</title>
+
+<style>
 * {
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    padding: 0;
-    background: #080808;
-    color: #e8e8e8;
-    font-family: Arial, sans-serif;
+    background: #080807;
+    color: #e8e2d5;
+    font-family: Georgia, serif;
     line-height: 1.8;
-}
-
-header {
-    text-align: center;
-    padding: 50px 20px 30px;
-}
-
-header h1 {
-    color: #d4af37;
-    font-size: 38px;
-    margin-bottom: 5px;
-}
-
-header p {
-    color: #aaa;
-    letter-spacing: 2px;
 }
 
 nav {
     text-align: center;
-    padding: 18px 10px;
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
+    padding: 17px 10px;
+    background: #090909;
+    border-top: 1px solid #55451e;
+    border-bottom: 1px solid #55451e;
 }
 
 nav a {
+    display: inline-block;
     color: #d4af37;
     text-decoration: none;
-    margin: 0 12px;
-    font-size: 14px;
+    margin: 5px 12px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
 }
 
 nav a:hover {
     color: white;
 }
 
+.hero {
+    min-height: 570px;
+    padding: 110px 20px 90px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:
+        radial-gradient(ellipse at center, #30230d 0%, #151008 42%, #080807 78%);
+    border-bottom: 1px solid #6d5422;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "✦";
+    position: absolute;
+    top: 35px;
+    color: #b99a48;
+    font-size: 30px;
+    opacity: 0.65;
+}
+
+.hero-label {
+    color: #c5a653;
+    letter-spacing: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    color: #e4c36c;
+    font-size: clamp(55px, 10vw, 100px);
+    font-weight: normal;
+    line-height: 1.1;
+    margin: 20px 0 5px;
+    text-shadow: 0 4px 30px #000;
+}
+
+.sinhala-title {
+    color: #f0dca8;
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.hero-line {
+    width: 90px;
+    height: 1px;
+    background: #c5a653;
+    margin: 25px auto;
+}
+
+.hero-description {
+    color: #c7bda8;
+    font-family: Arial, sans-serif;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 30px;
+    border: 1px solid #c5a653;
+    color: #e4c36c;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    letter-spacing: 2px;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: #c5a653;
+    color: #080807;
+}
+
 main {
-    max-width: 950px;
+    max-width: 1050px;
     margin: auto;
-    padding: 30px 20px;
+    padding: 35px 22px;
 }
 
 section {
-    margin-bottom: 40px;
+    margin-bottom: 65px;
+}
+
+.section-label {
+    color: #9b8248;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
 }
 
 h2 {
-    color: #d4af37;
-    border-bottom: 1px solid #806b30;
-    padding-bottom: 10px;
-    margin-top: 35px;
-}
-
-h3 {
-    color: #d4af37;
-    margin-top: 20px;
-}
-
-p {
-    color: #ccc;
-}
-
-.details {
-    background: #151515;
-    padding: 22px;
-    border-left: 3px solid #d4af37;
-    border-radius: 5px;
+    color: #d9b75c;
+    font-size: 30px;
+    font-weight: normal;
+    margin-top: 5px;
     margin-bottom: 25px;
 }
 
-.details p {
-    margin: 9px 0;
+h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 1px;
+    background: #9b7934;
+    margin-top: 12px;
 }
 
-.details strong {
-    color: #d4af37;
+p {
+    color: #c9c4b9;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.detail-card {
+    background: linear-gradient(135deg, #19170f, #10100e);
+    border: 1px solid #39301c;
+    padding: 18px 20px;
+    border-radius: 4px;
+}
+
+.detail-card strong {
+    display: block;
+    color: #d4af57;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.detail-card span {
+    color: #e5dfd2;
+    font-size: 16px;
+}
+
+.people-box {
+    background: #11110f;
+    border: 1px solid #39301c;
+    padding: 25px;
+    border-radius: 4px;
+}
+
+h3 {
+    color: #d9b75c;
+    font-weight: normal;
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+.crew-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 30px;
+}
+
+.crew-grid p {
+    border-bottom: 1px solid #29261d;
+    padding: 7px 0;
+    margin: 0;
+}
+
+.crew-grid strong {
+    color: #d4af57;
+}
+
+.synopsis {
+    background: linear-gradient(135deg, #17150f, #0e0e0c);
+    border-left: 3px solid #b28e3e;
+    padding: 30px;
+}
+
+.synopsis p {
+    font-size: 16px;
+    line-height: 2;
+    margin: 0;
 }
 
 .award {
     text-align: center;
-    background: #17130a;
-    border: 1px solid #a98b32;
-    padding: 30px 20px;
-    border-radius: 8px;
-    margin: 25px 0;
+    padding: 55px 20px;
+    background:
+        radial-gradient(ellipse at center, #30230e, #12100b 75%);
+    border: 1px solid #9b7934;
+    border-radius: 5px;
+}
+
+.award-symbol {
+    color: #d9b75c;
+    font-size: 40px;
 }
 
 .award h3 {
-    color: #d4af37;
-    font-size: 28px;
+    color: #e4c36c;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    letter-spacing: 4px;
+}
+
+.award p {
+    color: #d8c9a6;
+    font-size: 17px;
 }
 
 .statement {
-    background: #151515;
-    padding: 25px;
-    border-left: 3px solid #d4af37;
-    border-radius: 5px;
+    background: #11110f;
+    border: 1px solid #39301c;
+    padding: 30px;
+    border-radius: 4px;
+}
+
+.statement p {
+    line-height: 2;
+    margin-bottom: 22px;
+}
+
+.statement p:last-child {
+    margin-bottom: 0;
 }
 
 footer {
     text-align: center;
-    padding: 25px;
-    border-top: 1px solid #333;
-    color: #888;
-    font-size: 13px;
+    padding: 30px 15px;
+    background: #080807;
+    border-top: 1px solid #55451e;
+    color: #92866b;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
 }
 
-@media(max-width:600px) {
+@media(max-width: 650px) {
+    .hero {
+        min-height: 470px;
+        padding: 80px 15px;
+    }
 
-    header h1 {
-        font-size: 29px;
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .sinhala-title {
+        font-size: 25px;
+    }
+
+    .details,
+    .crew-grid {
+        grid-template-columns: 1fr;
     }
 
     nav a {
-        display: inline-block;
-        margin: 7px;
+        margin: 5px 7px;
+        font-size: 11px;
     }
 
     main {
-        padding: 20px 15px;
+        padding: 25px 16px;
     }
 
+    h2 {
+        font-size: 26px;
+    }
+
+    .synopsis,
+    .statement,
+    .people-box {
+        padding: 20px;
+    }
 }
+</style>
+</head>
 
-</style></head><body><header><h1>A Dancer</h1>
+<body>
 
-<p>නැට්ටුවෙක්</p>
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="filmography.html">FILMS</a>
+    <a href="awards.html">AWARDS</a>
+    <a href="gallery.html">AWARD GALLERY</a>
+</nav>
 
-<p>A Short Film by Dhanusha Fernando</p>
+<header class="hero">
 
-</header><nav><a href="index.html">HOME</a>
-<a href="about.html">ABOUT</a>
-<a href="filmography.html">FILMS</a>
-<a href="awards.html">AWARDS</a>
-<a href="gallery.html">AWARD GALLERY</a>
+    <div class="hero-label">A Cinematic Journey</div>
 
-</nav><main><!-- ABOUT THE FILM --><section><h2>About the Film</h2>
+    <h1>A Dancer</h1>
 
-<div class="details">
+    <div class="sinhala-title">නැට්ටුවෙක්</div>
 
-    <p><strong>Film Title:</strong> A Dancer</p>
+    <div class="hero-line"></div>
 
-    <p><strong>Original Title:</strong> නැට්ටුවෙක්</p>
+    <div class="hero-description">
+        A SHORT FILM BY DHANUSHA FERNANDO
+    </div>
 
-    <p><strong>Format:</strong> Short Film</p>
+    <a href="#about-film" class="hero-button">
+        EXPLORE THE FILM
+    </a>
 
-    <p><strong>Genre:</strong> Psychological Drama</p>
+</header>
 
-    <p><strong>Country:</strong> Sri Lanka</p>
+<main>
 
-    <p><strong>Runtime:</strong> 34:59</p>
+<section id="about-film">
 
-    <p><strong>Completion Date:</strong> 25 October 2026</p>
+    <div class="section-label">THE FILM</div>
+    <h2>About the Film</h2>
 
-</div>
+    <div class="details">
 
-</section><!-- CAST AND CREW --><section><h2>Cast & Crew</h2>
+        <div class="detail-card">
+            <strong>FILM TITLE</strong>
+            <span>A Dancer</span>
+        </div>
 
-<div class="details">
+        <div class="detail-card">
+            <strong>ORIGINAL TITLE</strong>
+            <span>නැට්ටුවෙක්</span>
+        </div>
 
-    <h3>Cast</h3>
+        <div class="detail-card">
+            <strong>FORMAT</strong>
+            <span>Short Film</span>
+        </div>
 
-    <p>Nilmini Kottegoda</p>
+        <div class="detail-card">
+            <strong>GENRE</strong>
+            <span>Psychological Drama</span>
+        </div>
 
-    <p>Chirath Bombuwalage</p>
+        <div class="detail-card">
+            <strong>COUNTRY</strong>
+            <span>Sri Lanka</span>
+        </div>
 
-    <p>Thilina Perera</p>
+        <div class="detail-card">
+            <strong>RUNTIME</strong>
+            <span>34:59</span>
+        </div>
 
-    <p>Priyan Anura Sri</p>
+        <div class="detail-card">
+            <strong>COMPLETION DATE</strong>
+            <span>25 October 2026</span>
+        </div>
 
-    <p>Janidu Lochana</p>
+    </div>
 
+</section>
 
-    <h3>Crew</h3>
+<section>
 
-    <p><strong>Director:</strong> Dhanusha Fernando</p>
+    <div class="section-label">THE PEOPLE BEHIND THE FILM</div>
+    <h2>Cast & Crew</h2>
 
-    <p><strong>Story & Screenplay:</strong> Dhanusha Fernando</p>
+    <div class="people-box">
 
-    <p><strong>Editor:</strong> Dhanusha Fernando</p>
+        <h3>Cast</h3>
 
-    <p><strong>Visual Effects:</strong> Dhanusha Fernando</p>
+        <p>Nilmini Kottegoda</p>
+        <p>Chirath Bombuwalage</p>
+        <p>Thilina Perera</p>
+        <p>Priyan Anura Sri</p>
+        <p>Janidu Lochana</p>
 
-    <p><strong>Art Director:</strong> Dhanusha Fernando</p>
+        <h3>Crew</h3>
 
-    <p><strong>Producers:</strong> Chirath Bombuwalage & Shani Bombuwalage</p>
+        <div class="crew-grid">
 
-    <p><strong>Director of Photography:</strong> Ranga Liyanawaduge</p>
+            <p><strong>Director:</strong> Dhanusha Fernando</p>
 
-    <p><strong>Assistant Director:</strong> Gayan Harshana</p>
+            <p><strong>Story & Screenplay:</strong> Dhanusha Fernando</p>
 
-    <p><strong>Colourist:</strong> Isuru Fernando</p>
+            <p><strong>Editor:</strong> Dhanusha Fernando</p>
 
-    <p><strong>Script Editor:</strong> Kamila Medis</p>
+            <p><strong>Visual Effects:</strong> Dhanusha Fernando</p>
 
-    <p><strong>Hair & Makeup:</strong> Priyan Anura Sri</p>
+            <p><strong>Art Director:</strong> Dhanusha Fernando</p>
 
-    <p><strong>Music Director:</strong> Lakindu Madusanka</p>
+            <p><strong>Producers:</strong> Chirath Bombuwalage & Shani Bombuwalage</p>
 
-</div>
+            <p><strong>Director of Photography:</strong> Ranga Liyanawaduge</p>
 
-</section><!-- SYNOPSIS --><section><h2>Synopsis</h2>
+            <p><strong>Assistant Director:</strong> Gayan Harshana</p>
 
-<p>
-Since childhood, Kasun has dreamed of becoming a Ves dancer, but despite years of determination and sacrifice, his dream remains unfulfilled. After his mother’s emergency surgery consumes his savings, he works as a cross-dresser at a nightclub to earn money for his Ves Mangalyaya. However, he falls seriously ill and is diagnosed with a condition known as Night Blinder. Following treatment, he returns home, only to face humiliation, verbal abuse and physical violence when his mother discovers him wearing women’s clothing. Overwhelmed by rejection, emotional distress and despair, Kasun reaches a breaking point and contemplates ending his life. In his final moments, reality gives way to imagination, and he envisions himself adorned in full Ves attire, dancing gracefully to the rhythm of traditional drums. Though he never fulfils his childhood dream in reality, he experiences it through vivid mental images, leaving a poignant reflection on unfulfilled dreams, the cruelty of fate and the devastating consequences of social prejudice and rejection.
-</p>
+            <p><strong>Colourist:</strong> Isuru Fernando</p>
 
-</section><!-- INTERNATIONAL RECOGNITION --><section><h2>International Recognition</h2>
+            <p><strong>Script Editor:</strong> Kamila Medis</p>
 
-<div class="award">
+            <p><strong>Hair & Makeup:</strong> Priyan Anura Sri</p>
 
-    <h3>OFFICIAL SELECTION</h3>
+            <p><strong>Music Director:</strong> Lakindu Madusanka</p>
 
-    <p>
-    Black Cat Award International Film Festival 2026
-    </p>
+        </div>
 
-    <p>La Paz, Bolivia</p>
+    </div>
 
-</div>
+</section>
 
-</section><!-- DIRECTOR'S STATEMENT --><section><h2>Director's Statement</h2>
+<section>
 
-<div class="statement">
+    <div class="section-label">THE STORY</div>
+    <h2>Synopsis</h2>
 
-    <p>
-    As a filmmaker, I believe that every human being carries a dream, but not everyone gets the opportunity to fulfil it. Sometimes, the greatest obstacles do not come from fate alone, but from the society and people from whom we expect love and understanding.
-    </p>
+    <div class="synopsis">
 
-    <p>
-    Through Nettuwek, I wanted to explore the emotional struggles of a person whose childhood dream becomes a painful journey of sacrifice, rejection and unfulfilled hopes. Kasun's story represents more than an individual struggle. It reflects the experiences of people who are misunderstood, judged and rejected simply because they do not fit into society's expectations.
-    </p>
+        <p>
+        Since childhood, Kasun has dreamed of becoming a Ves dancer, but despite years of determination and sacrifice, his dream remains unfulfilled. After his mother’s emergency surgery consumes his savings, he works as a cross-dresser at a nightclub to earn money for his Ves Mangalyaya. However, he falls seriously ill and is diagnosed with a condition known as Night Blinder. Following treatment, he returns home, only to face humiliation, verbal abuse and physical violence when his mother discovers him wearing women’s clothing. Overwhelmed by rejection, emotional distress and despair, Kasun reaches a breaking point and contemplates ending his life. In his final moments, reality gives way to imagination, and he envisions himself adorned in full Ves attire, dancing gracefully to the rhythm of traditional drums. Though he never fulfils his childhood dream in reality, he experiences it through vivid mental images, leaving a poignant reflection on unfulfilled dreams, the cruelty of fate and the devastating consequences of social prejudice and rejection.
+        </p>
 
-    <p>
-    The traditional art of Ves dancing is an important part of Sri Lankan cultural identity. I wanted to bring this cultural element into a story that also explores personal identity, dreams and the human need for acceptance.
-    </p>
+    </div>
 
-    <p>
-    My intention was not simply to tell a tragic story, but to encourage audiences to look beyond appearances, question social prejudice and understand the emotional pain that can exist behind someone's silence.
-    </p>
+</section>
 
-    <p>
-    With Nettuwek, I hope viewers will realise that a little understanding, acceptance and kindness can make a difference in another person's life.
-    </p>
+<section>
 
-</div>
+    <div class="section-label">GLOBAL RECOGNITION</div>
+    <h2>International Recognition</h2>
 
-</section></main><footer>© 2026 Dhanusha Fernando. All Rights Reserved.
+    <div class="award">
 
-</footer></body>
-                                    </html>
+        <div class="award-symbol">✦</div>
+
+        <h3>OFFICIAL SELECTION</h3>
+
+        <p>
+        Black Cat Award International Film Festival 2026
+        </p>
+
+        <p>La Paz, Bolivia</p>
+
+        <div class="hero-line"></div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <div class="section-label">FROM THE DIRECTOR</div>
+    <h2>Director's Statement</h2>
+
+    <div class="statement">
+
+        <p>
+        As a filmmaker, I believe that every human being carries a dream, but not everyone gets the opportunity to fulfil it. Sometimes, the greatest obstacles do not come from fate alone, but from the society and people from whom we expect love and understanding.
+        </p>
+
+        <p>
+        Through Nettuwek, I wanted to explore the emotional struggles of a person whose childhood dream becomes a painful journey of sacrifice, rejection and unfulfilled hopes. Kasun's story represents more than an individual struggle. It reflects the experiences of people who are misunderstood, judged and rejected simply because they do not fit into society's expectations.
+        </p>
+
+        <p>
+        The traditional art of Ves dancing is an important part of Sri Lankan cultural identity. I wanted to bring this cultural element into a story that also explores personal identity, dreams and the human need for acceptance.
+        </p>
+
+        <p>
+        My intention was not simply to tell a tragic story, but to encourage audiences to look beyond appearances, question social prejudice and understand the emotional pain that can exist behind someone's silence.
+        </p>
+
+        <p>
+        With Nettuwek, I hope viewers will realise that a little understanding, acceptance and kindness can make a difference in another person's life.
+        </p>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+    © 2026 Dhanusha Fernando. All Rights Reserved.
+</footer>
+
+</body>
+    </html>
