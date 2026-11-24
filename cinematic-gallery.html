@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cinematic Gallery | Dhanusha Fernando</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #080807;
+    color: #eee;
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+}
+
+nav {
+    text-align: center;
+    padding: 18px 10px;
+    border-bottom: 1px solid #55451e;
+}
+
+nav a {
+    color: #d4af37;
+    text-decoration: none;
+    margin: 7px 12px;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: radial-gradient(ellipse, #30230d, #080807 75%);
+    border-bottom: 1px solid #806b30;
+}
+
+.hero h1 {
+    color: #e4c36c;
+    font-family: Georgia, serif;
+    font-size: clamp(40px, 8vw, 75px);
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+.hero p {
+    color: #c5b99e;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 45px 20px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.intro h2 {
+    color: #d9b75c;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.intro p {
+    color: #aaa;
+}
+
+.category {
+    margin-bottom: 60px;
+}
+
+.category h2 {
+    color: #d9b75c;
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: normal;
+    border-bottom: 1px solid #55451e;
+    padding-bottom: 10px;
+}
+
+.category p {
+    color: #999;
+    font-size: 14px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #55451e;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.02);
+    border-color: #d4af37;
+}
+
+.placeholder {
+    background: #15130e;
+    border: 1px dashed #806b30;
+    padding: 55px 15px;
+    text-align: center;
+    color: #b99a48;
+    border-radius: 4px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #55451e;
+    color: #888;
+    font-size: 12px;
+}
+
+@media(max-width: 650px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+        font-size: 11px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="filmography.html">FILMS</a>
+    <a href="awards.html">AWARDS</a>
+    <a href="gallery.html">AWARD GALLERY</a>
+    <a href="cinematic-gallery.html">CINEMATIC GALLERY</a>
+</nav>
+
+<header class="hero">
+    <p>BEHIND THE FRAME · BEYOND THE SCREEN</p>
+    <h1>Cinematic Gallery</h1>
+    <p>DHANUSHA FERNANDO | FILMMAKER · VISUAL ARTIST</p>
+</header>
+
+<main>
+
+<section class="intro">
+    <h2>Stories Behind the Camera</h2>
+    <p>
+        A collection of filmmaking moments, creative work,
+        visual experiments and memories from behind the scenes.
+    </p>
+</section>
+
+<section class="category">
+    <h2>Behind the Scenes</h2>
+    <p>Moments from film productions and creative journeys.</p>
+
+    <div class="gallery">
+        <div class="placeholder">Your BTS Photograph 01</div>
+        <div class="placeholder">Your BTS Photograph 02</div>
+    </div>
+</section>
+
+<section class="category">
+    <h2>Cinematography & Camera Work</h2>
+    <p>Exploring visual storytelling through the camera.</p>
+
+    <div class="gallery">
+        <div class="placeholder">Your Cinematography Photograph 01</div>
+        <div class="placeholder">Your Cinematography Photograph 02</div>
+    </div>
+</section>
+
+<section class="category">
+    <h2>Art Direction & Creative Work</h2>
+    <p>Visual imagination, artistic details and creative experiments.</p>
+
+    <div class="gallery">
+        <div class="placeholder">Your Creative Photograph 01</div>
+        <div class="placeholder">Your Creative Photograph 02</div>
+    </div>
+</section>
+
+<section class="category">
+    <h2>Prosthetic Makeup & SFX</h2>
+    <p>Practical effects, prosthetic creations and transformation.</p>
+
+    <div class="gallery">
+        <div class="placeholder">Your SFX Photograph 01</div>
+        <div class="placeholder">Your SFX Photograph 02</div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    © 2026 Dhanusha Fernando. All Rights Reserved.
+</footer>
+
+</body>
+  </html>
