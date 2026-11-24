@@ -1,339 +1,682 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<meta name="description" content="Our Love Is Forever — an award-winning Sri Lankan short film directed by Dhanusha Fernando, recognised with 56 international festival awards.">
+
 <title>Our Love Is Forever | Dhanusha Fernando</title>
 
 <style>
+:root {
+    --gold: #c9a45c;
+    --light-gold: #e4c987;
+    --black: #080808;
+    --dark: #11100e;
+    --white: #f5f1e9;
+    --grey: #aaa49a;
+}
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    background: #080808;
-    color: #e8e8e8;
-    font-family: Arial, sans-serif;
+    background: var(--black);
+    color: var(--white);
+    font-family: Georgia, serif;
     line-height: 1.8;
 }
 
-header {
-    text-align: center;
-    padding: 50px 20px 30px;
-}
-
-header h1 {
-    color: #d4af37;
-    font-size: 38px;
-    margin-bottom: 5px;
-}
-
-header p {
-    color: #aaa;
-    letter-spacing: 2px;
-}
-
 nav {
-    text-align: center;
-    padding: 18px 10px;
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    border-bottom: 1px solid #30291d;
+    position: sticky;
+    top: 0;
+    background: rgba(8,8,8,.97);
+    z-index: 100;
 }
 
-nav a {
-    color: #d4af37;
+.logo {
+    color: var(--gold);
+    font-size: 24px;
+    letter-spacing: 3px;
+    font-weight: bold;
     text-decoration: none;
-    margin: 0 12px;
-    font-size: 14px;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+nav a:not(.logo) {
+    color: var(--white);
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    transition: .3s;
 }
 
 nav a:hover {
-    color: white;
+    color: var(--gold);
 }
 
-main {
-    max-width: 950px;
-    margin: auto;
-    padding: 30px 20px;
-}
+/* CINEMATIC HERO */
 
-section {
-    margin-bottom: 40px;
-}
-
-h2 {
-    color: #d4af37;
-    border-bottom: 1px solid #806b30;
-    padding-bottom: 10px;
-    margin-top: 35px;
-}
-
-h3 {
-    color: #d4af37;
-    margin-top: 20px;
-}
-
-p {
-    color: #ccc;
-}
-
-.film-details {
-    background: #151515;
-    padding: 22px;
-    border-left: 3px solid #d4af37;
-    border-radius: 5px;
-    margin-bottom: 25px;
-}
-
-.film-details p {
-    margin: 9px 0;
-}
-
-.film-details strong {
-    color: #d4af37;
-}
-
-.award {
+.hero {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    background: #17130a;
-    border: 1px solid #a98b32;
-    padding: 30px 20px;
-    border-radius: 8px;
+    padding: 90px 7%;
+    background:
+        radial-gradient(ellipse at center, rgba(201,164,92,.15), transparent 65%),
+        linear-gradient(135deg, #17130d, #080808 65%);
+    border-bottom: 1px solid #30291d;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    color: var(--gold);
+    font-size: clamp(40px, 8vw, 76px);
+    font-weight: normal;
+    line-height: 1.2;
     margin: 25px 0;
 }
 
-.award h3 {
-    color: #d4af37;
-    font-size: 35px;
-    margin: 5px;
+.hero-subtitle {
+    color: var(--grey);
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 3px;
 }
 
-.award p {
-    color: #ddd;
+.hero-description {
+    max-width: 650px;
+    margin: 25px auto 0;
+    color: #c5beb2;
+    font-size: 16px;
 }
+
+.button {
+    display: inline-block;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    padding: 12px 26px;
+    margin: 25px 8px 0;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    transition: .3s;
+}
+
+.button:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+.button-filled {
+    background: var(--gold);
+    color: var(--black);
+}
+
+/* SECTIONS */
+
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 75px 35px;
+}
+
+.section-heading {
+    color: var(--gold);
+    font-size: 34px;
+    font-weight: normal;
+    margin: 12px 0;
+}
+
+.line {
+    width: 65px;
+    height: 2px;
+    background: var(--gold);
+    margin: 22px 0 35px;
+}
+
+section p {
+    color: var(--grey);
+    font-size: 15px;
+}
+
+/* SYNOPSIS */
+
+.synopsis {
+    max-width: 850px;
+}
+
+/* FILM DETAILS */
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.detail-card {
+    background: #13120f;
+    border: 1px solid #30291d;
+    padding: 20px;
+    border-left: 2px solid var(--gold);
+}
+
+.detail-card strong {
+    display: block;
+    color: var(--gold);
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.detail-card span {
+    color: var(--white);
+    font-size: 14px;
+}
+
+/* CREDITS */
+
+.credits {
+    background: #11100e;
+    border: 1px solid #30291d;
+    padding: 30px;
+}
+
+.credits h3 {
+    color: var(--gold);
+    font-size: 21px;
+    font-weight: normal;
+    margin: 15px 0;
+}
+
+.credit-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #29251e;
+    font-size: 14px;
+}
+
+.credit-row strong {
+    color: var(--gold);
+    font-weight: normal;
+}
+
+.credit-row span {
+    color: var(--grey);
+    text-align: right;
+}
+
+/* AWARDS */
+
+.award {
+    text-align: center;
+    padding: 50px 25px;
+    border: 1px solid var(--gold);
+    background:
+        radial-gradient(ellipse at center, #29200e, #11100e 75%);
+}
+
+.award-number {
+    color: var(--gold);
+    font-size: clamp(48px, 9vw, 80px);
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.award-subtitle {
+    color: var(--light-gold);
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+/* DIRECTOR STATEMENT */
 
 .statement {
-    background: #151515;
-    padding: 25px;
-    border-left: 3px solid #d4af37;
-    border-radius: 5px;
+    padding: 35px;
+    background: #13120f;
+    border-left: 3px solid var(--gold);
 }
+
+.statement p {
+    margin-bottom: 20px;
+}
+
+/* FOOTER */
 
 footer {
     text-align: center;
-    padding: 25px;
-    border-top: 1px solid #333;
-    color: #888;
-    font-size: 13px;
+    padding: 30px 15px;
+    border-top: 1px solid #30291d;
+    color: #777;
+    font-size: 12px;
 }
 
-@media(max-width:600px) {
+footer span {
+    color: var(--gold);
+}
 
-    header h1 {
+/* MOBILE */
+
+@media(max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a:not(.logo) {
+        font-size: 9px;
+    }
+
+    .hero {
+        min-height: 65vh;
+    }
+
+    section {
+        padding: 55px 7%;
+    }
+
+    .section-heading {
         font-size: 29px;
     }
 
-    nav a {
-        display: inline-block;
-        margin: 7px;
+    .credits {
+        padding: 20px;
     }
 
-    main {
-        padding: 20px 15px;
+    .credit-row {
+        flex-direction: column;
+        gap: 2px;
     }
 
+    .credit-row span {
+        text-align: left;
+    }
+
+    .statement {
+        padding: 22px;
+    }
 }
-
 </style>
 </head>
 
 <body>
 
-<header>
-
-    <h1>Our Love Is Forever</h1>
-
-    <p>A SHORT FILM BY DHANUSHA FERNANDO</p>
-
-</header>
-
+<!-- NAVIGATION -->
 
 <nav>
 
-    <a href="index.html">HOME</a>
+    <a href="index.html" class="logo">DF.</a>
 
-    <a href="about.html">ABOUT</a>
-
-    <a href="filmography.html">FILMS</a>
-
-    <a href="awards.html">AWARDS</a>
-
-    <a href="gallery.html">AWARD GALLERY</a>
+    <div class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="filmography.html">FILMS</a>
+        <a href="awards.html">AWARDS</a>
+        <a href="gallery.html">AWARD GALLERY</a>
+    </div>
 
 </nav>
 
+<!-- HERO -->
 
-<main>
+<header class="hero">
 
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            An Award-Winning Sri Lankan Short Film
+        </div>
+
+        <h1>Our Love Is Forever</h1>
+
+        <div class="hero-subtitle">
+            A FILM BY DHANUSHA FERNANDO
+        </div>
+
+        <p class="hero-description">
+            A deeply emotional story exploring love, loss,
+            family and the boundaries between life and death.
+        </p>
+
+        <a href="#synopsis" class="button button-filled">
+            DISCOVER THE FILM
+        </a>
+
+        <a href="https://youtu.be/lZARVqdCdhM"
+           class="button"
+           target="_blank"
+           rel="noopener noreferrer">
+            WATCH THE FILM
+        </a>
+
+    </div>
+
+</header>
 
 <!-- SYNOPSIS -->
 
-<section>
+<section id="synopsis">
 
-    <h2>Synopsis</h2>
+    <div class="eyebrow">The Story</div>
 
-    <p>
-    The Attempt Of A Child Who Doesn't Know That He Died And Trying To Live With His Parents. The Mental Pressure Of A Mother And Father Due To The Death Of Their Only Son, His Son Became A Soul To His Mother And Spend Time With Her The Husband Who Does Not See Any Of This And Hospitalized Her Wife, The Husband, Who Is Taking Care Of His Wife, Suddenly The Police Comes To The Home And Arresting Him Because Of The Wife's Death, What Happened To Their Family The Story Of Tragic Fate.
-    </p>
+    <h2 class="section-heading">Synopsis</h2>
+
+    <div class="line"></div>
+
+    <div class="synopsis">
+
+        <p>
+        A child who does not know that he has died continues trying
+        to live with his parents. Following the death of their only
+        son, a mother and father struggle with overwhelming grief.
+        The child's spirit remains connected to his mother, spending
+        time with her in ways that her husband cannot see or understand.
+        </p>
+
+        <p style="margin-top:20px;">
+        Unable to understand what is happening, the husband has his
+        wife admitted to hospital. But as events unfold, the family's
+        tragic fate takes an unexpected turn, leading to a devastating
+        confrontation with the truth.
+        </p>
+
+    </div>
 
 </section>
-
 
 <!-- FILM DETAILS -->
 
 <section>
 
-    <h2>Film Details</h2>
+    <div class="eyebrow">Production Information</div>
 
-    <div class="film-details">
+    <h2 class="section-heading">Film Details</h2>
 
-        <p><strong>Film Title:</strong> Our Love Is Forever</p>
+    <div class="line"></div>
 
-        <p><strong>Format:</strong> Short Film</p>
+    <div class="details-grid">
 
-        <p><strong>Country:</strong> Sri Lanka</p>
+        <div class="detail-card">
+            <strong>FILM TITLE</strong>
+            <span>Our Love Is Forever</span>
+        </div>
 
-        <p><strong>Director:</strong> Dhanusha Fernando</p>
+        <div class="detail-card">
+            <strong>FORMAT</strong>
+            <span>Short Film</span>
+        </div>
 
-        <p><strong>Story & Screenplay:</strong> Dhanusha Fernando</p>
+        <div class="detail-card">
+            <strong>COUNTRY</strong>
+            <span>Sri Lanka</span>
+        </div>
 
-        <p><strong>Editor:</strong> Dhanusha Fernando</p>
+        <div class="detail-card">
+            <strong>DIRECTOR</strong>
+            <span>Dhanusha Fernando</span>
+        </div>
 
-        <p><strong>Visual Effects:</strong> Dhanusha Fernando</p>
+        <div class="detail-card">
+            <strong>STORY & SCREENPLAY</strong>
+            <span>Dhanusha Fernando</span>
+        </div>
 
-        <p><strong>Art Director:</strong> Dhanusha Fernando</p>
+        <div class="detail-card">
+            <strong>EDITOR</strong>
+            <span>Dhanusha Fernando</span>
+        </div>
+
+        <div class="detail-card">
+            <strong>VISUAL EFFECTS</strong>
+            <span>Dhanusha Fernando</span>
+        </div>
+
+        <div class="detail-card">
+            <strong>ART DIRECTOR</strong>
+            <span>Dhanusha Fernando</span>
+        </div>
 
     </div>
 
 </section>
-
 
 <!-- CAST AND CREW -->
 
 <section>
 
-    <h2>Cast & Crew</h2>
+    <div class="eyebrow">The People Behind The Film</div>
 
-    <div class="film-details">
+    <h2 class="section-heading">Cast & Crew</h2>
+
+    <div class="line"></div>
+
+    <div class="credits">
 
         <h3>Cast</h3>
 
-        <p><strong>Aloka:</strong> Damithu Duke Rakjitha Fernando</p>
+        <div class="credit-row">
+            <strong>Aloka</strong>
+            <span>Damithu Duke Rakjitha Fernando</span>
+        </div>
 
-        <p><strong>Chamara:</strong> Sanjana Muthumal Perera</p>
+        <div class="credit-row">
+            <strong>Chamara</strong>
+            <span>Sanjana Muthumal Perera</span>
+        </div>
 
-        <p><strong>Irajini:</strong> Ishara Malshi Morayas</p>
+        <div class="credit-row">
+            <strong>Irajini</strong>
+            <span>Ishara Malshi Morayas</span>
+        </div>
 
-        <p><strong>Police Sergeant:</strong> Nalin Madurapperuma</p>
+        <div class="credit-row">
+            <strong>Police Sergeant</strong>
+            <span>Nalin Madurapperuma</span>
+        </div>
 
-        <p><strong>Police Constable:</strong> Charindu Sandaruwan</p>
+        <div class="credit-row">
+            <strong>Police Constable</strong>
+            <span>Charindu Sandaruwan</span>
+        </div>
 
-        <p><strong>Doctor:</strong> Dulantha Randika</p>
+        <div class="credit-row">
+            <strong>Doctor</strong>
+            <span>Dulantha Randika</span>
+        </div>
 
+        <h3 style="margin-top:40px;">Crew</h3>
 
-        <h3>Crew</h3>
+        <div class="credit-row">
+            <strong>Director</strong>
+            <span>Dhanusha Fernando</span>
+        </div>
 
-        <p><strong>Director:</strong> Dhanusha Fernando</p>
+        <div class="credit-row">
+            <strong>Producers</strong>
+            <span>Indika Lakmali Fernando & Nishantha Fernando</span>
+        </div>
 
-        <p><strong>Producers:</strong> Indika Lakmali Fernando & Nishantha Fernando</p>
+        <div class="credit-row">
+            <strong>Director of Photography</strong>
+            <span>Athula Chaminda Kalupahana</span>
+        </div>
 
-        <p><strong>Director of Photography:</strong> Athula Chaminda Kalupahana</p>
+        <div class="credit-row">
+            <strong>Editor</strong>
+            <span>Dhanusha Fernando</span>
+        </div>
 
-        <p><strong>Editor:</strong> Dhanusha Fernando</p>
+        <div class="credit-row">
+            <strong>Assistant Director</strong>
+            <span>Dulantha Randika</span>
+        </div>
 
-        <p><strong>Assistant Director:</strong> Dulantha Randika</p>
+        <div class="credit-row">
+            <strong>Colourist</strong>
+            <span>Isuru Fernando</span>
+        </div>
 
-        <p><strong>Colourist:</strong> Isuru Fernando</p>
+        <div class="credit-row">
+            <strong>Art Director</strong>
+            <span>Dhanusha Fernando</span>
+        </div>
 
-        <p><strong>Art Director:</strong> Dhanusha Fernando</p>
+        <div class="credit-row">
+            <strong>Visual Effects</strong>
+            <span>Dhanusha Fernando</span>
+        </div>
 
-        <p><strong>Visual Effects:</strong> Dhanusha Fernando</p>
+        <div class="credit-row">
+            <strong>Sound Recordist</strong>
+            <span>Sandaru Wishmitha</span>
+        </div>
 
-        <p><strong>Sound Recordist:</strong> Sandaru Wishmitha</p>
-
-        <p><strong>Production Managers:</strong> Janith Dilshan & Vihanga Dissanayaka</p>
+        <div class="credit-row">
+            <strong>Production Managers</strong>
+            <span>Janith Dilshan & Vihanga Dissanayaka</span>
+        </div>
 
     </div>
 
 </section>
-
 
 <!-- INTERNATIONAL RECOGNITION -->
 
 <section>
 
-    <h2>International Recognition</h2>
+    <div class="eyebrow">International Recognition</div>
+
+    <h2 class="section-heading">A Journey of Recognition</h2>
+
+    <div class="line"></div>
 
     <div class="award">
 
-        <h3>56 INTERNATIONAL AWARDS</h3>
+        <div class="eyebrow">International Film Festival Recognition</div>
 
-        <p>
-        Our Love Is Forever has received 56 awards at international film festivals, recognising the creative contributions of its cast and crew.
+        <h2 class="award-number">56</h2>
+
+        <div class="award-subtitle">
+            INTERNATIONAL FESTIVAL AWARDS
+        </div>
+
+        <p style="margin-top:25px;">
+        Our Love Is Forever has received 56 awards at international
+        film festivals, recognising the creative contributions of
+        its cast and crew.
         </p>
 
     </div>
 
 </section>
-
 
 <!-- DIRECTOR'S STATEMENT -->
 
 <section>
 
-    <h2>Director's Statement</h2>
+    <div class="eyebrow">A Personal Perspective</div>
+
+    <h2 class="section-heading">Director's Statement</h2>
+
+    <div class="line"></div>
 
     <div class="statement">
 
         <p>
-        As a filmmaker, I am deeply interested in exploring human emotions, relationships and the psychological experiences that shape our lives.
+        As a filmmaker, I am deeply interested in exploring human
+        emotions, relationships and the psychological experiences
+        that shape our lives.
         </p>
 
         <p>
-        Through Our Love Is Forever, I wanted to explore the emotional consequences of losing a loved one and the powerful connection between a parent and a child. The film follows a family struggling with the death of their only son, while the child's spirit remains connected to his mother, creating an emotional journey shaped by love, grief and tragedy.
+        Through Our Love Is Forever, I wanted to explore the emotional
+        consequences of losing a loved one and the powerful connection
+        between a parent and a child. The film follows a family
+        struggling with the death of their only son, while the child's
+        spirit remains connected to his mother, creating an emotional
+        journey shaped by love, grief and tragedy.
         </p>
 
         <p>
-        I wanted to explore how people experience loss differently and how unbearable emotional pain can affect the human mind. The story also reflects the importance of understanding the people we love, especially when they are going through experiences that we cannot see or fully understand.
+        I wanted to explore how people experience loss differently
+        and how unbearable emotional pain can affect the human mind.
+        The story also reflects the importance of understanding the
+        people we love, especially when they are going through
+        experiences that we cannot see or fully understand.
         </p>
 
         <p>
-        My intention was not simply to tell a supernatural tragedy, but to present an emotional story about family bonds, unconditional love, grief and the fragile nature of human relationships.
+        My intention was not simply to tell a supernatural tragedy,
+        but to present an emotional story about family bonds,
+        unconditional love, grief and the fragile nature of
+        human relationships.
         </p>
 
         <p>
-        With Our Love Is Forever, I hope audiences will look beyond what is visible, recognise the depth of human emotions and reflect on the importance of love, understanding and compassion.
+        With Our Love Is Forever, I hope audiences will look beyond
+        what is visible, recognise the depth of human emotions and
+        reflect on the importance of love, understanding and compassion.
         </p>
 
     </div>
 
 </section>
 
-
-</main>
-
+<!-- FOOTER -->
 
 <footer>
 
     © 2026 Dhanusha Fernando. All Rights Reserved.
 
+    <br>
+
+    <span>Filmmaker · Storyteller · Visual Artist</span>
+
 </footer>
 
-
 </body>
-    </html>
+</html>
