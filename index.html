@@ -3,13 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Official portfolio of Dhanusha Fernando — Sri Lankan Film Director, Writer, Editor, Photographer and Visual Artist.">
-<title>Dhanusha Fernando | Filmmaker & Visual Artist</title>
+
+<meta name="description" content="Official portfolio of Dhanusha Fernando, award-winning Sri Lankan film director, writer, editor and visual artist.">
+
+<title>Dhanusha Fernando | Film Director & Visual Artist</title>
 
 <style>
 :root {
     --gold: #c9a45c;
+    --gold-light: #e2c486;
     --black: #080808;
+    --dark: #10100f;
     --white: #f5f1e9;
     --grey: #aaa49a;
 }
@@ -20,7 +24,10 @@
     box-sizing: border-box;
 }
 
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
 
 body {
     background: var(--black);
@@ -29,63 +36,123 @@ body {
     line-height: 1.7;
 }
 
+a {
+    color: inherit;
+}
+
+/* NAVIGATION */
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 22px 8%;
+    padding: 20px 8%;
     border-bottom: 1px solid #29251e;
     position: sticky;
     top: 0;
-    background: rgba(8,8,8,.96);
-    z-index: 10;
+    background: rgba(8,8,8,.97);
+    backdrop-filter: blur(10px);
+    z-index: 100;
 }
 
 .logo {
     color: var(--gold);
-    font-size: 20px;
-    letter-spacing: 2px;
+    font-size: 25px;
+    letter-spacing: 3px;
     font-weight: bold;
+    text-decoration: none;
 }
 
-nav a {
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a:not(.logo) {
     color: var(--white);
     text-decoration: none;
-    margin-left: 22px;
-    font-size: 13px;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    transition: .3s;
 }
 
-nav a:hover { color: var(--gold); }
+nav a:hover {
+    color: var(--gold);
+}
+
+/* HERO */
 
 .hero {
-    min-height: 85vh;
+    min-height: 88vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 100px 10%;
-    background: linear-gradient(110deg, #080808 45%, #211a10 100%);
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 85% 40%, rgba(201,164,92,.15), transparent 45%),
+        linear-gradient(110deg, #080808 35%, #1c170f 100%);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border: 1px solid rgba(201,164,92,.12);
+    border-radius: 50%;
+    right: -100px;
+    top: 20%;
+    box-shadow: 0 0 0 40px rgba(201,164,92,.025),
+                0 0 0 80px rgba(201,164,92,.02);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
 }
 
 .eyebrow {
     color: var(--gold);
     letter-spacing: 5px;
     text-transform: uppercase;
-    font-size: 12px;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
 }
 
 h1 {
-    font-size: clamp(45px, 8vw, 90px);
-    line-height: 1.1;
+    font-size: clamp(48px, 9vw, 100px);
+    line-height: 1.05;
     margin: 25px 0;
     font-weight: normal;
+    letter-spacing: 2px;
 }
 
-h1 span { color: var(--gold); }
+h1 span {
+    color: var(--gold);
+}
 
-.hero p {
-    max-width: 600px;
+.hero-subtitle {
+    color: var(--white);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    max-width: 590px;
     color: var(--grey);
     font-size: 17px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .button {
@@ -93,9 +160,11 @@ h1 span { color: var(--gold); }
     border: 1px solid var(--gold);
     color: var(--gold);
     text-decoration: none;
-    padding: 12px 28px;
+    padding: 12px 27px;
     margin-top: 30px;
-    width: fit-content;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
     transition: .3s;
 }
 
@@ -104,80 +173,191 @@ h1 span { color: var(--gold); }
     color: var(--black);
 }
 
-section { padding: 85px 10%; }
-
-.section-title {
-    font-size: 38px;
-    font-weight: normal;
-    margin-bottom: 15px;
+.button-filled {
+    background: var(--gold);
+    color: var(--black);
 }
 
-.section-title span { color: var(--gold); }
+.button-filled:hover {
+    background: var(--gold-light);
+}
+
+/* SECTIONS */
+
+section {
+    padding: 90px 10%;
+}
+
+.dark {
+    background: var(--dark);
+}
+
+.section-title {
+    font-size: 40px;
+    font-weight: normal;
+    margin: 12px 0;
+}
+
+.section-title span {
+    color: var(--gold);
+}
 
 .line {
     width: 65px;
     height: 2px;
     background: var(--gold);
-    margin-bottom: 35px;
+    margin: 25px 0 35px;
 }
 
-.about p {
+/* ABOUT */
+
+.about-content {
     max-width: 850px;
-    color: var(--grey);
-    font-size: 17px;
 }
 
-.dark { background: #10100f; }
+.about-content p {
+    color: var(--grey);
+    font-size: 16px;
+    margin-bottom: 18px;
+}
 
-.film-grid, .award-grid, .skill-grid {
+/* FILMS */
+
+.film-grid,
+.award-grid,
+.skill-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 22px;
+}
+
+.film-card {
+    display: block;
+    text-decoration: none;
+    border: 1px solid #302b22;
+    padding: 32px;
+    background: linear-gradient(145deg, #171510, #0d0c0a);
+    transition: .35s;
+    position: relative;
+}
+
+.film-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-7px);
+    background: #19150e;
+}
+
+.label {
+    color: var(--gold);
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.film-card h3 {
+    color: var(--white);
+    font-size: 25px;
+    font-weight: normal;
+    margin: 18px 0;
+}
+
+.film-card p {
+    color: var(--grey);
+    font-size: 14px;
+}
+
+.film-meta {
+    color: var(--gold) !important;
+    margin-top: 20px;
+    font-size: 12px !important;
+    letter-spacing: 1px;
+}
+
+.view-project {
+    display: inline-block;
+    color: var(--gold);
+    margin-top: 25px;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* AWARDS */
+
+.award-grid .card {
+    text-align: center;
 }
 
 .card {
     border: 1px solid #302b22;
-    padding: 28px;
+    padding: 27px;
     background: #11100e;
     transition: .3s;
 }
 
 .card:hover {
     border-color: var(--gold);
-    transform: translateY(-5px);
+    transform: translateY(-4px);
 }
 
 .card h3 {
     color: var(--gold);
-    font-size: 22px;
+    font-size: 19px;
+    font-weight: normal;
     margin-bottom: 12px;
 }
 
 .card p {
     color: var(--grey);
-    font-size: 14px;
+    font-size: 13px;
 }
 
-.label {
-    color: var(--gold);
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.award-grid .card { text-align: center; }
-
-.award-grid h3 { font-size: 18px; }
+/* EXPERTISE */
 
 .skill-grid .card {
     text-align: center;
     color: var(--white);
-    font-size: 16px;
+    font-size: 15px;
+    padding: 25px 15px;
 }
+
+/* SOCIAL */
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.social-links a {
+    border: 1px solid #49402e;
+    padding: 12px 20px;
+    color: var(--gold);
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+.social-links a:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+/* CONTACT */
 
 .contact {
     text-align: center;
-    background: linear-gradient(110deg, #17130d, #080808);
+    background:
+        radial-gradient(ellipse at center, #211a10 0%, #080808 75%);
+}
+
+.contact .line {
+    margin: 22px auto 30px;
 }
 
 .contact p {
@@ -185,31 +365,80 @@ section { padding: 85px 10%; }
     margin-top: 15px;
 }
 
+/* FOOTER */
+
 footer {
-    padding: 25px;
+    padding: 30px 15px;
     text-align: center;
     border-top: 1px solid #29251e;
     color: #777;
     font-size: 12px;
 }
 
-@media(max-width:650px) {
+footer span {
+    color: var(--gold);
+}
+
+/* MOBILE */
+
+@media(max-width: 700px) {
+
     nav {
         flex-direction: column;
-        gap: 12px;
+        gap: 15px;
+        padding: 17px 5%;
     }
-    nav a { margin: 0 7px; }
-    .hero { min-height: 75vh; }
-    section { padding: 65px 7%; }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 13px;
+    }
+
+    nav a:not(.logo) {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .hero {
+        min-height: 75vh;
+        padding: 80px 7%;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    section {
+        padding: 65px 7%;
+    }
+
+    .section-title {
+        font-size: 33px;
+    }
+
+    .film-grid,
+    .award-grid,
+    .skill-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        gap: 5px;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
+
 <nav>
-    <div class="logo">DF.</div>
-    <div>
+    <a href="index.html" class="logo">DF.</a>
+
+    <div class="nav-links">
         <a href="#about">ABOUT</a>
         <a href="#films">FILMS</a>
         <a href="awards.html">AWARDS</a>
@@ -218,87 +447,163 @@ footer {
     </div>
 </nav>
 
+<!-- HERO -->
+
 <header class="hero">
-    <div class="eyebrow">Filmmaker · Storyteller · Visual Artist</div>
-    <h1>DHANUSHA<br><span>FERNANDO</span></h1>
-    <p>
-        Film Director | Writer | Editor | Cinematographer
-        <br><br>
-        Creating meaningful cinematic experiences through stories,
-        emotions and visual imagination.
-    </p>
-    <a href="#films" class="button">EXPLORE MY WORK</a>
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            Filmmaker · Storyteller · Visual Artist
+        </div>
+
+        <h1>
+            DHANUSHA<br>
+            <span>FERNANDO</span>
+        </h1>
+
+        <div class="hero-subtitle">
+            FILM DIRECTOR | WRITER | EDITOR | CINEMATOGRAPHER
+        </div>
+
+        <p class="hero-description">
+            Creating meaningful cinematic experiences through stories,
+            emotions and visual imagination. Exploring the human experience
+            through the art of filmmaking.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#films" class="button button-filled">
+                EXPLORE MY FILMS
+            </a>
+
+            <a href="about.html" class="button">
+                DISCOVER MY STORY
+            </a>
+        </div>
+
+    </div>
 </header>
 
+<!-- ABOUT -->
+
 <section id="about" class="about">
+
     <div class="eyebrow">The Story Behind The Frames</div>
-    <h2 class="section-title">About <span>Me</span></h2>
+
+    <h2 class="section-title">
+        About <span>Me</span>
+    </h2>
+
     <div class="line"></div>
 
-    <p>
-        Dhanusha Fernando is an award-winning Sri Lankan film director,
-        writer and editor with a passion for cinematic storytelling and
-        exploring the emotional and psychological dimensions of human
-        experiences.
-        <br><br>
-        With a strong interest in every aspect of filmmaking, including
-        directing, screenwriting, cinematography, editing and visual
-        effects, he believes in creating meaningful cinematic experiences
-        that connect with audiences.
-        <br><br>
-        His first short film, Our Love Is Forever, has received
-        international recognition, earning 56 awards at film festivals.
-        His achievements include winning the Best Director Award in
-        Kolkata, India, in 2023, and the Best Director Award at the
-        Black Cat Award International Film Festival in Bolivia.
-        <br><br>
-        As a filmmaker, Dhanusha is particularly interested in exploring
-        human emotions, social realities, psychological struggles and
-        untold stories through a distinctive cinematic approach.
-    </p>
+    <div class="about-content">
+
+        <p>
+            Dhanusha Fernando is an award-winning Sri Lankan film director,
+            writer and editor passionate about cinematic storytelling and
+            exploring the emotional and psychological dimensions of human
+            experiences.
+        </p>
+
+        <p>
+            His first short film, <i>Our Love Is Forever</i>, has received
+            international recognition, earning 56 awards at film festivals.
+            His creative journey also includes recognition in directing,
+            cinematography, prosthetic makeup and visual arts.
+        </p>
+
+        <p>
+            Through his films, Dhanusha aims to explore human emotions,
+            social realities, psychological struggles and untold stories
+            through a distinctive cinematic approach.
+        </p>
+
+        <a href="about.html" class="button">
+            READ MY FULL STORY
+        </a>
+
+    </div>
 </section>
 
+<!-- FILMS -->
+
 <section id="films" class="dark">
+
     <div class="eyebrow">Selected Filmography</div>
-    <h2 class="section-title">My <span>Films</span></h2>
+
+    <h2 class="section-title">
+        My <span>Films</span>
+    </h2>
+
     <div class="line"></div>
 
     <div class="film-grid">
-        <div class="card">
+
+        <a href="our-love-is-forever.html" class="film-card">
+
             <div class="label">Award-Winning Short Film</div>
+
             <h3>Our Love Is Forever</h3>
+
             <p>
                 A deeply emotional story exploring love, loss,
                 family and the boundaries between life and death.
             </p>
-            <p style="margin-top:15px;color:#c9a45c;">
-                56 International Festival Awards
-            </p>
-        </div>
 
-        <div class="card">
+            <p class="film-meta">
+                56 INTERNATIONAL FESTIVAL AWARDS
+            </p>
+
+            <span class="view-project">
+                EXPLORE FILM →
+            </span>
+
+        </a>
+
+        <a href="a-dancer.html" class="film-card">
+
             <div class="label">Sinhala Psychological Drama</div>
+
             <h3>A Dancer (නැට්ටුවෙක්)</h3>
+
             <p>
                 A psychological drama exploring dreams, sacrifice,
                 identity and the struggles of an aspiring traditional dancer.
             </p>
-            <p style="margin-top:15px;color:#c9a45c;">
-                Director · Writer · Editor
+
+            <p class="film-meta">
+                DIRECTOR · WRITER · EDITOR
             </p>
-        </div>
+
+            <span class="view-project">
+                EXPLORE FILM →
+            </span>
+
+        </a>
+
     </div>
 </section>
 
+<!-- AWARDS -->
+
 <section id="awards">
+
     <div class="eyebrow">Recognition & Achievements</div>
-    <h2 class="section-title">Awards & <span>Honours</span></h2>
+
+    <h2 class="section-title">
+        Awards & <span>Honours</span>
+    </h2>
+
     <div class="line"></div>
 
     <div class="award-grid">
+
         <div class="card">
             <h3>56 Awards</h3>
-            <p>International Film Festival Awards<br>Our Love Is Forever</p>
+            <p>
+                International Film Festival Awards<br>
+                Our Love Is Forever
+            </p>
         </div>
 
         <div class="card">
@@ -308,53 +613,157 @@ footer {
 
         <div class="card">
             <h3>Best Director</h3>
-            <p>Black Cat Award International Film Festival · Bolivia</p>
+            <p>
+                Black Cat Award International Film Festival<br>
+                Bolivia
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Best Cinematography</h3>
+            <p>
+                Australian International Film Festival<br>
+                Mouna Silambu · 2026
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Best Cinematography</h3>
+            <p>
+                Indo Japan International Film Festival<br>
+                Mouna Silambu · 2026
+            </p>
         </div>
 
         <div class="card">
             <h3>Visual Artist of the Year</h3>
-            <p>Sri Lanka · New Generation Youth Top40 Award 2025</p>
+            <p>
+                Sri Lanka<br>
+                New Generation Youth Top40 Award · 2025
+            </p>
         </div>
 
         <div class="card">
             <h3>Best Makeup Artist</h3>
-            <p>French International Short Film Festival · Canvas</p>
+            <p>
+                French International Short Film Festival<br>
+                The Canvas
+            </p>
         </div>
+
     </div>
+
+    <div style="text-align:center;">
+        <a href="awards.html" class="button">
+            VIEW ALL AWARDS & RECOGNITION
+        </a>
+    </div>
+
 </section>
 
+<!-- CREATIVE EXPERTISE -->
+
 <section class="dark">
+
     <div class="eyebrow">Creative Practice</div>
-    <h2 class="section-title">Creative <span>Expertise</span></h2>
+
+    <h2 class="section-title">
+        Creative <span>Expertise</span>
+    </h2>
+
     <div class="line"></div>
 
     <div class="skill-grid">
+
         <div class="card">Film Direction</div>
         <div class="card">Screenwriting</div>
         <div class="card">Film Editing</div>
         <div class="card">Cinematography</div>
         <div class="card">Visual Effects</div>
+        <div class="card">Art Direction</div>
+        <div class="card">Prosthetic Makeup & SFX</div>
         <div class="card">Photography</div>
-        <div class="card">Prosthetic Makeup</div>
-        <div class="card">Visual Arts</div>
+
     </div>
 </section>
 
-<section id="contact" class="contact">
-    <div class="eyebrow">Let's Connect</div>
-    <h2 class="section-title">Get In <span>Touch</span></h2>
-    <div class="line" style="margin:20px auto;"></div>
-    <p>For collaborations, film projects and creative opportunities.</p>
+<!-- SOCIAL LINKS -->
 
-    <a class="button" href="https://filmfreeway.com/DhanushaFernando" target="_blank">
-        FILMFREEWAY PROFILE
-    </a>
+<section>
+
+    <div class="eyebrow" style="text-align:center;">
+        Follow My Creative Journey
+    </div>
+
+    <h2 class="section-title" style="text-align:center;">
+        Connect <span>With Me</span>
+    </h2>
+
+    <div class="line" style="margin:20px auto 30px;"></div>
+
+    <div class="social-links">
+
+        <a href="https://www.facebook.com/profile.php?id=100063765471247"
+           target="_blank" rel="noopener noreferrer">
+            FACEBOOK
+        </a>
+
+        <a href="https://youtube.com/@dhanushafernandoproduction5748"
+           target="_blank" rel="noopener noreferrer">
+            YOUTUBE
+        </a>
+
+        <a href="https://www.facebook.com/dfsoulframephotography"
+           target="_blank" rel="noopener noreferrer">
+            PHOTOGRAPHY
+        </a>
+
+        <a href="https://filmfreeway.com/DhanushaFernando"
+           target="_blank" rel="noopener noreferrer">
+            FILMFREEWAY
+        </a>
+
+    </div>
+
 </section>
 
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+    <div class="eyebrow">Let's Create Something Meaningful</div>
+
+    <h2 class="section-title">
+        Get In <span>Touch</span>
+    </h2>
+
+    <div class="line"></div>
+
+    <p>
+        For collaborations, film projects and creative opportunities.
+    </p>
+
+    <a class="button button-filled"
+       href="https://filmfreeway.com/DhanushaFernando"
+       target="_blank" rel="noopener noreferrer">
+
+        FILMFREEWAY PROFILE
+
+    </a>
+
+</section>
+
+<!-- FOOTER -->
+
 <footer>
+
     © 2026 Dhanusha Fernando. All Rights Reserved.
-    <br>Filmmaker · Storyteller · Visual Artist
+
+    <br>
+
+    <span>Filmmaker · Storyteller · Visual Artist</span>
+
 </footer>
 
 </body>
-    </html>
+</html>
