@@ -100,21 +100,36 @@ main {
 .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 24px;
+    margin-top: 25px;
 }
 
 .gallery img {
     width: 100%;
-    height: auto;
+    height: 320px;
+    object-fit: cover;
     display: block;
     border: 1px solid #55451e;
-    border-radius: 4px;
-    transition: 0.3s;
+    border-radius: 6px;
+    transition: transform 0.4s ease, border-color 0.4s ease;
 }
 
 .gallery img:hover {
-    transform: scale(1.02);
+    transform: scale(1.025);
     border-color: #d4af37;
+}
+
+@media(max-width: 650px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .gallery img {
+        height: auto;
+        max-height: 420px;
+        object-fit: contain;
+    }
 }
 
 .placeholder {
