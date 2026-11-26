@@ -104,6 +104,33 @@ section h2 {
 .media-box p {
     color: #aaa;
 }
+    .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 420px;
+    object-fit: contain;
+    display: block;
+    background: #080808;
+    border: 1px solid #55451e;
+    border-radius: 6px;
+}
+
+@media(max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery img {
+        height: 450px;
+    }
+}
+    
 
 footer {
     text-align: center;
