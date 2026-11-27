@@ -120,6 +120,23 @@ nav a:hover {
     color: #080808;
 }
 
+/* PUBLICATION GALLERY */
+
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.media-grid .media-box {
+    margin-bottom: 10px;
+}
+
+.media-grid img {
+    width: 100%;
+    max-width: 100%;
+}
+
 footer {
     text-align: center;
     padding: 25px;
@@ -129,6 +146,7 @@ footer {
 }
 
 @media(max-width: 600px) {
+
     header h1 {
         font-size: 27px;
     }
@@ -139,6 +157,10 @@ footer {
 
     .media-box {
         padding: 18px;
+    }
+
+    .media-grid {
+        grid-template-columns: 1fr;
     }
 }
 </style>
@@ -307,9 +329,83 @@ footer {
         and independent media coverage of my film projects.
     </p>
 
-    <p>
-        Additional publications will be added as they become available.
-    </p>
+</div>
+
+
+<!-- MIRROR ARTS AND ARTIST.LK PUBLICATIONS -->
+
+<div class="media-grid">
+
+    <div class="media-box">
+
+        <h3>Mirror Arts</h3>
+
+        <img src="Mirror Arts 01.jpg"
+             alt="Mirror Arts Media Feature">
+
+        <p>Media feature published by Mirror Arts.</p>
+
+        <a class="media-link"
+           href="https://www.facebook.com/share/p/1C5y9bVnLZ/"
+           target="_blank">
+           VIEW PUBLICATION
+        </a>
+
+    </div>
+
+
+    <div class="media-box">
+
+        <h3>Artist.lk – Feature 01</h3>
+
+        <img src="Artist LK 01.jpg"
+             alt="Artist.lk Media Feature">
+
+        <p>Media feature published by Artist.lk.</p>
+
+        <a class="media-link"
+           href="https://www.facebook.com/share/p/1Eo82JNBKC/"
+           target="_blank">
+           VIEW PUBLICATION
+        </a>
+
+    </div>
+
+
+    <div class="media-box">
+
+        <h3>Artist.lk – Feature 02</h3>
+
+        <img src="Artist Lk 02.jpg"
+             alt="Artist.lk Media Feature">
+
+        <p>Another media feature published by Artist.lk.</p>
+
+        <a class="media-link"
+           href="https://www.facebook.com/share/p/1AEaLs85Kt/"
+           target="_blank">
+           VIEW PUBLICATION
+        </a>
+
+    </div>
+
+
+    <div class="media-box">
+
+        <h3>Pythagoras – පයිතගරස්</h3>
+
+        <img src="Pythagoras.jpg"
+             alt="Pythagoras Media Feature">
+
+        <p>Media feature published by Pythagoras.</p>
+
+        <a class="media-link"
+           href="https://www.facebook.com/share/p/1KDCeChsb5/"
+           target="_blank">
+           VIEW PUBLICATION
+        </a>
+
+    </div>
 
 </div>
 
@@ -336,4 +432,4 @@ footer {
 </footer>
 
 </body>
-</html>
+    </html>
