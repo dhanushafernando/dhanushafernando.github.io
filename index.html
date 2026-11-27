@@ -46,7 +46,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
+    padding: 12px 8%;
     border-bottom: 1px solid #29251e;
     position: sticky;
     top: 0;
@@ -55,12 +55,20 @@ nav {
     z-index: 100;
 }
 
+/* LOGO SIZE FIX */
+
 .logo {
-    color: var(--gold);
-    font-size: 30px;
-    letter-spacing: 3px;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
     text-decoration: none;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    display: block;
 }
 
 .nav-links {
@@ -385,8 +393,13 @@ footer span {
 
     nav {
         flex-direction: column;
-        gap: 15px;
-        padding: 17px 5%;
+        gap: 12px;
+        padding: 12px 5%;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 50px;
     }
 
     .nav-links {
@@ -437,7 +450,8 @@ footer span {
 
 <nav>
     <a href="index.html" class="logo">
-    <img src="Dhanusha%20Fernando%20LOGO.png" alt="Dhanusha Fernando Logo">
+        <img src="Dhanusha%20Fernando%20LOGO.png"
+             alt="Dhanusha Fernando Logo">
     </a>
 
     <div class="nav-links">
@@ -749,10 +763,9 @@ footer span {
     </p>
 
     <a class="button button-filled"
-       href="https://filmfreeway.com/DhanushaFernando"
-       target="_blank" rel="noopener noreferrer">
+       href="contact.html">
 
-        FILMFREEWAY PROFILE
+        CONTACT & COLLABORATION
 
     </a>
 
