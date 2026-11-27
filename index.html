@@ -121,6 +121,50 @@ nav a:hover {
 .hero-content {
     position: relative;
     z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-photo {
+    flex: 0 0 300px;
+    width: 300px;
+    height: 380px;
+    border: 2px solid var(--gold);
+    padding: 7px;
+    background: #111;
+    box-shadow: 0 0 35px rgba(201,164,92,.18);
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media(max-width: 700px) {
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-photo {
+        flex: none;
+        width: 220px;
+        height: 280px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+    
 }
 
 .eyebrow {
@@ -468,39 +512,52 @@ footer span {
 <!-- HERO -->
 
 <header class="hero">
+
     <div class="hero-content">
 
-        <div class="eyebrow">
-            Filmmaker · Storyteller · Visual Artist
+        <div class="hero-text">
+
+            <div class="eyebrow">
+                Filmmaker · Storyteller · Visual Artist
+            </div>
+
+            <h1>
+                DHANUSHA<br>
+                <span>FERNANDO</span>
+            </h1>
+
+            <div class="hero-subtitle">
+                FILM DIRECTOR | WRITER | EDITOR | CINEMATOGRAPHER
+            </div>
+
+            <p class="hero-description">
+                Creating meaningful cinematic experiences through stories,
+                emotions and visual imagination. Exploring the human experience
+                through the art of filmmaking.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#films" class="button button-filled">
+                    EXPLORE MY FILMS
+                </a>
+
+                <a href="about.html" class="button">
+                    DISCOVER MY STORY
+                </a>
+
+            </div>
+
         </div>
 
-        <h1>
-            DHANUSHA<br>
-            <span>FERNANDO</span>
-        </h1>
-
-        <div class="hero-subtitle">
-            FILM DIRECTOR | WRITER | EDITOR | CINEMATOGRAPHER
-        </div>
-
-        <p class="hero-description">
-            Creating meaningful cinematic experiences through stories,
-            emotions and visual imagination. Exploring the human experience
-            through the art of filmmaking.
-        </p>
-
-        <div class="hero-buttons">
-            <a href="#films" class="button button-filled">
-                EXPLORE MY FILMS
-            </a>
-
-            <a href="about.html" class="button">
-                DISCOVER MY STORY
-            </a>
+        <div class="hero-photo">
+            <img src="Profile%20Pic.jpg"
+                 alt="Dhanusha Fernando - Film Director">
         </div>
 
     </div>
-</header>
+
+    </header>
 
 <!-- ABOUT -->
 
