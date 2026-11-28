@@ -22,30 +22,29 @@ body {
 
 header {
     text-align: center;
-    padding: 25px 15px;
-    border-bottom: 1px solid #302414;
+    padding: 20px 15px;
 }
 
 .logo {
     width: 65px;
     height: auto;
     object-fit: contain;
-    margin-bottom: 8px;   
 }
 
 nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 18px 10px;
+    gap: 18px;
+    padding: 17px 10px;
+    border-top: 1px solid #302414;
     border-bottom: 1px solid #302414;
 }
 
 nav a {
     color: #ddd;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 11px;
     letter-spacing: 1px;
 }
 
@@ -55,25 +54,25 @@ nav a:hover {
 
 .hero {
     text-align: center;
-    padding: 85px 20px 65px;
+    padding: 80px 20px 55px;
 }
 
 .eyebrow {
     color: #c9a45c;
     letter-spacing: 4px;
-    font-size: 12px;
+    font-size: 11px;
 }
 
 .hero h1 {
     color: #d6b36b;
-    font-size: clamp(30px, 6vw, 55px);
+    font-size: clamp(29px, 6vw, 52px);
     margin: 20px 0;
     letter-spacing: 2px;
 }
 
 .hero p {
     color: #aaa;
-    max-width: 650px;
+    max-width: 700px;
     margin: auto;
 }
 
@@ -100,7 +99,7 @@ nav a:hover {
 
 .category-title {
     color: #d6b36b;
-    font-size: 25px;
+    font-size: 24px;
     letter-spacing: 2px;
     border-bottom: 1px solid #40321d;
     padding-bottom: 15px;
@@ -110,56 +109,98 @@ nav a:hover {
 .project-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    gap: 28px;
 }
 
 .project {
     background: #111;
-    border: 1px solid #302414;
-    padding: 28px;
+    border: 1px solid #40321d;
     border-radius: 5px;
+    overflow: hidden;
     transition: 0.3s;
 }
 
 .project:hover {
-    border-color: #c9a45c;
+    border-color: #d6b36b;
     transform: translateY(-4px);
+}
+
+.thumbnail {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-bottom: 2px solid #c9a45c;
+    background: #000;
+}
+
+.thumbnail img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.project:hover .thumbnail img {
+    transform: scale(1.04);
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: rgba(201,164,92,0.95);
+    color: #080808;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    padding-left: 4px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.7);
+}
+
+.project-content {
+    padding: 23px;
 }
 
 .project h3 {
     color: #e0bd79;
-    font-size: 21px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    margin-bottom: 8px;
 }
 
 .role {
     color: #c9a45c;
-    font-size: 12px;
+    font-size: 11px;
     letter-spacing: 2px;
-    margin-bottom: 15px;
+    margin-bottom: 13px;
     text-transform: uppercase;
 }
 
 .project p {
     color: #aaa;
-    font-size: 14px;
-    margin-bottom: 12px;
+    font-size: 13px;
+    margin-bottom: 13px;
 }
 
 .project-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
+    gap: 9px;
+    margin-top: 18px;
 }
 
 .project-links a {
     display: inline-block;
     color: #080808;
     background: #c9a45c;
-    padding: 9px 14px;
+    padding: 9px 13px;
     text-decoration: none;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: bold;
     letter-spacing: 1px;
     border-radius: 2px;
@@ -173,8 +214,8 @@ nav a:hover {
     display: inline-block;
     color: #aaa;
     border: 1px solid #55462e;
-    padding: 7px 12px;
-    font-size: 11px;
+    padding: 6px 10px;
+    font-size: 10px;
     letter-spacing: 1px;
 }
 
@@ -205,7 +246,7 @@ footer span {
     }
 
     nav {
-        gap: 14px;
+        gap: 13px;
     }
 }
 </style>
@@ -232,7 +273,6 @@ footer span {
 </nav>
 
 <section class="hero">
-
     <div class="eyebrow">BEHIND THE FILMS · BEYOND THE FRAME</div>
 
     <h1>FILM & CREATIVE CREDITS</h1>
@@ -244,7 +284,6 @@ footer span {
         and professional projects I have contributed to
         across different departments of filmmaking.
     </p>
-
 </section>
 
 <div class="intro">
@@ -258,55 +297,56 @@ footer span {
 <!-- EDITING -->
 
 <section class="category">
-
 <h2 class="category-title">EDITING</h2>
 
 <div class="project-grid">
 
-    <div class="project">
-        <h3>Author's Judgement</h3>
-        <div class="role">Editor</div>
-
-        <p>A film editing credit.</p>
-
-        <div class="project-links">
-            <a href="https://youtu.be/MCCuwgspt3U"
-               target="_blank">WATCH TRAILER</a>
-        </div>
-
-        <p><span class="pending">FULL FILM NOT AVAILABLE</span></p>
-    </div>
-
-
-    <div class="project">
-        <h3>Corona Positive</h3>
-        <div class="role">Editor</div>
-
-        <p>A film editing credit.</p>
-
-        <div class="project-links">
-            <a href="https://youtu.be/teIOpdBsP_w"
-               target="_blank">WATCH TRAILER</a>
-        </div>
-
-        <p><span class="pending">FULL FILM NOT AVAILABLE</span></p>
-    </div>
+<div class="project">
+<a class="thumbnail" href="https://youtu.be/MCCuwgspt3U" target="_blank">
+<img src="https://img.youtube.com/vi/MCCuwgspt3U/hqdefault.jpg" alt="Author's Judgement Trailer">
+<span class="play-button">▶</span>
+</a>
+<div class="project-content">
+<h3>Author's Judgement</h3>
+<div class="role">Editor</div>
+<div class="project-links">
+<a href="https://youtu.be/MCCuwgspt3U" target="_blank">WATCH TRAILER</a>
+</div>
+<p><span class="pending">FULL FILM NOT AVAILABLE</span></p>
+</div>
+</div>
 
 
-    <div class="project">
-        <h3>Rukmani Devi's Tribute Song</h3>
-        <div class="role">Editor</div>
+<div class="project">
+<a class="thumbnail" href="https://youtu.be/teIOpdBsP_w" target="_blank">
+<img src="https://img.youtube.com/vi/teIOpdBsP_w/hqdefault.jpg" alt="Corona Positive Trailer">
+<span class="play-button">▶</span>
+</a>
+<div class="project-content">
+<h3>Corona Positive</h3>
+<div class="role">Editor</div>
+<div class="project-links">
+<a href="https://youtu.be/teIOpdBsP_w" target="_blank">WATCH TRAILER</a>
+</div>
+<p><span class="pending">FULL FILM NOT AVAILABLE</span></p>
+</div>
+</div>
 
-        <p>
-            A special tribute song dedicated to the legendary
-            Sri Lankan singer Rukmani Devi.
-        </p>
 
-        <div class="project-links">
-            <a href="https://youtu.be/bdurqEMuaDA"
-               target="_blank">WATCH FULL SONG</a>
-        </div>
-    </div>
+<div class="project">
+<a class="thumbnail" href="https://youtu.be/bdurqEMuaDA" target="_blank">
+<img src="https://img.youtube.com/vi/bdurqEMuaDA/hqdefault.jpg" alt="Rukmani Devi Tribute Song">
+<span class="play-button">▶</span>
+</a>
+<div class="project-content">
+<h3>Rukmani Devi's Tribute Song</h3>
+<div class="role">Editor</div>
+<p>A special tribute song dedicated to the legendary Rukmani Devi.</p>
+<div class="project-links">
+<a href="https://youtu.be/bdurqEMuaDA" target="_blank">WATCH FULL SONG</a>
+</div>
+</div>
+</div>
 
 </div>
 </section>
@@ -315,37 +355,39 @@ footer span {
 <!-- CINEMATOGRAPHY -->
 
 <section class="category">
-
 <h2 class="category-title">CINEMATOGRAPHY</h2>
 
 <div class="project-grid">
 
-    <div class="project">
-        <h3>Mouna Silambu</h3>
-        <div class="role">Director of Photography</div>
+<div class="project">
+<a class="thumbnail" href="https://youtu.be/7LFDXfm_R7o" target="_blank">
+<img src="https://img.youtube.com/vi/7LFDXfm_R7o/hqdefault.jpg" alt="Mouna Silambu">
+<span class="play-button">▶</span>
+</a>
+<div class="project-content">
+<h3>Mouna Silambu</h3>
+<div class="role">Director of Photography</div>
+<div class="project-links">
+<a href="https://youtu.be/7LFDXfm_R7o" target="_blank">WATCH FULL FILM</a>
+</div>
+</div>
+</div>
 
-        <p>A cinematography contribution.</p>
 
-        <div class="project-links">
-            <a href="https://youtu.be/7LFDXfm_R7o"
-               target="_blank">WATCH FULL FILM</a>
-        </div>
-    </div>
-
-
-    <div class="project">
-        <h3>The Canvas</h3>
-        <div class="role">Director of Photography</div>
-
-        <p>A cinematography contribution.</p>
-
-        <div class="project-links">
-            <a href="https://youtu.be/nMYYQecgf-8"
-               target="_blank">WATCH TRAILER</a>
-        </div>
-
-        <p><span class="pending">FULL FILM NOT AVAILABLE</span></p>
-    </div>
+<div class="project">
+<a class="thumbnail" href="https://youtu.be/nMYYQecgf-8" target="_blank">
+<img src="https://img.youtube.com/vi/nMYYQecgf-8/hqdefault.jpg" alt="The Canvas Trailer">
+<span class="play-button">▶</span>
+</a>
+<div class="project-content">
+<h3>The Canvas</h3>
+<div class="role">Director of Photography</div>
+<div class="project-links">
+<a href="https://youtu.be/nMYYQecgf-8" target="_blank">WATCH TRAILER</a>
+</div>
+<p><span class="pending">FULL FILM NOT AVAILABLE</span></p>
+</div>
+</div>
 
 </div>
 </section>
@@ -354,25 +396,24 @@ footer span {
 <!-- VISUAL EFFECTS -->
 
 <section class="category">
-
 <h2 class="category-title">VISUAL EFFECTS</h2>
 
 <div class="project-grid">
 
-    <div class="project">
-        <h3>The Bond</h3>
-        <div class="role">Visual Effects (VFX)</div>
-
-        <p>
-            A selected VFX sequence from the film,
-            showcasing my contribution to the production.
-        </p>
-
-        <div class="project-links">
-            <a href="https://youtu.be/0muI0eabqm8?t=311"
-               target="_blank">WATCH VFX SEQUENCE</a>
-        </div>
-    </div>
+<div class="project">
+<a class="thumbnail" href="https://youtu.be/0muI0eabqm8?t=311" target="_blank">
+<img src="https://img.youtube.com/vi/0muI0eabqm8/hqdefault.jpg" alt="The Bond VFX">
+<span class="play-button">▶</span>
+</a>
+<div class="project-content">
+<h3>The Bond</h3>
+<div class="role">Visual Effects (VFX)</div>
+<p>A selected VFX sequence from the film, showcasing my contribution to the production.</p>
+<div class="project-links">
+<a href="https://youtu.be/0muI0eabqm8?t=311" target="_blank">WATCH VFX SEQUENCE</a>
+</div>
+</div>
+</div>
 
 </div>
 </section>
@@ -381,76 +422,81 @@ footer span {
 <!-- ASSISTANT DIRECTION -->
 
 <section class="category">
-
 <h2 class="category-title">ASSISTANT DIRECTION</h2>
 
 <div class="project-grid">
 
-    <div class="project">
-        <h3>Shungariye | ශෘංගාරියේ</h3>
-        <div class="role">Assistant Director</div>
-
-        <div class="project-links">
-            <a href="https://youtu.be/n6vTAH-h2Yw"
-               target="_blank">WATCH FULL SONG</a>
-
-            <a href="https://www.facebook.com/share/v/1JNYzfaP2K/"
-               target="_blank">PRODUCTION FEATURE</a>
-        </div>
-    </div>
-
-
-    <div class="project">
-        <h3>Rahasak Se | රහසක් සේ</h3>
-        <div class="role">Assistant Director</div>
-
-        <div class="project-links">
-            <a href="https://youtu.be/1SZLhtecmXY"
-               target="_blank">WATCH FULL SONG</a>
-
-            <a href="https://www.facebook.com/share/v/14wH64bLw5j/"
-               target="_blank">PRODUCTION FEATURE</a>
-        </div>
-    </div>
+<div class="project">
+<a class="thumbnail" href="https://youtu.be/n6vTAH-h2Yw" target="_blank">
+<img src="https://img.youtube.com/vi/n6vTAH-h2Yw/hqdefault.jpg" alt="Shungariye">
+<span class="play-button">▶</span>
+</a>
+<div class="project-content">
+<h3>Shungariye | ශෘංගාරියේ</h3>
+<div class="role">Assistant Director</div>
+<div class="project-links">
+<a href="https://youtu.be/n6vTAH-h2Yw" target="_blank">WATCH FULL SONG</a>
+<a href="https://www.facebook.com/share/v/1JNYzfaP2K/" target="_blank">PRODUCTION FEATURE</a>
+</div>
+</div>
+</div>
 
 
-    <div class="project">
-        <h3>BOXER DOCUMENTARY 2026</h3>
-        <div class="role">Assistant Director</div>
+<div class="project">
+<a class="thumbnail" href="https://youtu.be/1SZLhtecmXY" target="_blank">
+<img src="https://img.youtube.com/vi/1SZLhtecmXY/hqdefault.jpg" alt="Rahasak Se">
+<span class="play-button">▶</span>
+</a>
+<div class="project-content">
+<h3>Rahasak Se | රහසක් සේ</h3>
+<div class="role">Assistant Director</div>
+<div class="project-links">
+<a href="https://youtu.be/1SZLhtecmXY" target="_blank">WATCH FULL SONG</a>
+<a href="https://www.facebook.com/share/v/14wH64bLw5j/" target="_blank">PRODUCTION FEATURE</a>
+</div>
+</div>
+</div>
 
-        <div class="project-links">
-            <a href="https://youtu.be/TrMgIUNP0fw"
-               target="_blank">WATCH FULL DOCUMENTARY</a>
 
-            <a href="https://www.facebook.com/share/v/1A4fffaqYg/"
-               target="_blank">PRODUCTION FEATURE</a>
-        </div>
-    </div>
+<div class="project">
+<a class="thumbnail" href="https://youtu.be/TrMgIUNP0fw" target="_blank">
+<img src="https://img.youtube.com/vi/TrMgIUNP0fw/hqdefault.jpg" alt="BOXER Documentary 2026">
+<span class="play-button">▶</span>
+</a>
+<div class="project-content">
+<h3>BOXER DOCUMENTARY 2026</h3>
+<div class="role">Assistant Director</div>
+<div class="project-links">
+<a href="https://youtu.be/TrMgIUNP0fw" target="_blank">WATCH FULL DOCUMENTARY</a>
+<a href="https://www.facebook.com/share/v/1A4fffaqYg/" target="_blank">PRODUCTION FEATURE</a>
+</div>
+</div>
+</div>
 
 
-    <div class="project">
-        <h3>Sri Lankan Aviation College – Profile Video</h3>
-        <div class="role">Assistant Director · 2023</div>
-
-        <div class="project-links">
-            <a href="https://youtu.be/KhkzV7_nbgg"
-               target="_blank">WATCH FULL PROFILE VIDEO</a>
-        </div>
-    </div>
+<div class="project">
+<a class="thumbnail" href="https://youtu.be/KhkzV7_nbgg" target="_blank">
+<img src="https://img.youtube.com/vi/KhkzV7_nbgg/hqdefault.jpg" alt="Sri Lankan Aviation College Profile Video">
+<span class="play-button">▶</span>
+</a>
+<div class="project-content">
+<h3>Sri Lankan Aviation College – Profile Video</h3>
+<div class="role">Assistant Director · 2023</div>
+<div class="project-links">
+<a href="https://youtu.be/KhkzV7_nbgg" target="_blank">WATCH FULL PROFILE VIDEO</a>
+</div>
+</div>
+</div>
 
 </div>
 </section>
 
 
 <footer>
-
-    © 2026 Dhanusha Fernando. All Rights Reserved.
-
-    <br>
-
-    <span>Filmmaker · Storyteller · Visual Artist</span>
-
+© 2026 Dhanusha Fernando. All Rights Reserved.
+<br>
+<span>Filmmaker · Storyteller · Visual Artist</span>
 </footer>
 
 </body>
-  </html>
+        </html>
